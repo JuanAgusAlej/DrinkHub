@@ -1,4 +1,29 @@
+main{
+    background-color:blanchedalmond;
+}
 .letraNavBar{
-    font-size: 0.8rem 
+    font-size: 1rem 
     
+}
+#footer {
+    background-color: black;
+    min-height: 0.8rem;
+    padding: 2rem;
+    font-size: 0.8rem ;
+    
+}
+#footer a{
+    text-decoration: none;
+    color:white;
+    
+    
+}
+.contenedorImg{
+    
+    width: max-width;
+
+}
+#error404{
+    
+    width: 70%;
 }
