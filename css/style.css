@@ -1,0 +1,57 @@
+body{
+    background-color:blanchedalmond;
+}
+
+.navbar{
+    background-color:black;
+    padding:0px;
+}
+.containerImg{
+    
+    width:8rem;
+}
+.letraNavBar{
+    font-size: 1rem 
+    
+}
+
+/* -----------------------------------main------------------------------- */
+
+.boxConf{
+    
+    width: 100vh;
+    background-color:white;
+    -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
+    box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
+
+}
+#inputTelefono{
+  
+  -webkit-appearance: textfield ; 
+
+
+}
+
+/*-------------------- FOOTER------------------------------------ */
+#footer {
+    background-color: black;
+    min-height: 0.8rem;
+    padding: 2rem;
+    font-size: 0.8rem ;
+    
+}
+#footer a{
+    text-decoration: none;
+    color:white;
+    
+    
+}
+.contenedorImg{
+    
+    width: max-width;
+
+}
+#error404{
+    
+    width: 70%;
+}
