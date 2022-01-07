@@ -1,5 +1,13 @@
-main{
+body{
     background-color:blanchedalmond;
+}
+
+.navbar{
+    background-color:black;
+}
+.containerImg{
+    
+    width:8rem;
 }
 .letraNavBar{
     font-size: 1rem 
