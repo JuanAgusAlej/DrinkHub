@@ -1,15 +1,19 @@
 body{
-    padding: 0;
-    margin: 0;
+    position: relative;
+    
 }
 
 .navbar{
     background-color:black;
+
+ 
+}
+.navbarContainer{
     padding:0px;
 }
 .containerImg{
     
-    width:8rem;
+    width:5rem;
 }
 .letraNavBar{
     font-size: 1rem 
@@ -17,11 +21,14 @@ body{
 }
 
 /* -----------------------------------main------------------------------- */
-
+.fondoError404{
+    background-color:white;
+}
 .boxConf{
+    width: 80vw;
     
-    width: 100vh;
-    background-color:antiquewhite;
+
+    
     -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
     box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
 
@@ -34,24 +41,20 @@ body{
 }
 
 /*-------------------- FOOTER------------------------------------ */
-#footer {
-    background-color: black;
-    min-height: 0.8rem;
-    padding: 2rem;
-    font-size: 0.8rem ;
-    
+.row{
+    --bs-gutter-x: 0;
 }
+
 #footer a{
     text-decoration: none;
     color:white;
     
     
 }
-.contenedorImg{
-    
-    width: max-width;
-
+.copyImg{
+    width: 15rem;
 }
+
 #error404{
     
     width: 70%;
