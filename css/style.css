@@ -1,9 +1,14 @@
 body{
     position: relative;
+    
 }
 
 .navbar{
     background-color:black;
+
+ 
+}
+.navbarContainer{
     padding:0px;
 }
 .containerImg{
@@ -16,12 +21,14 @@ body{
 }
 
 /* -----------------------------------main------------------------------- */
-
+.fondoError404{
+    background-color:white;
+}
 .boxConf{
-    
+    width: 80vw;
     
 
-    background-color:antiquewhite;
+    
     -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
     box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
 
@@ -34,6 +41,9 @@ body{
 }
 
 /*-------------------- FOOTER------------------------------------ */
+.row{
+    --bs-gutter-x: 0;
+}
 
 #footer a{
     text-decoration: none;
