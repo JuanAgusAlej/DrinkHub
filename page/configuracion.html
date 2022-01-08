@@ -56,11 +56,12 @@
       </div>
     </nav>
   </header>
-  <main class="d-flex justify-content-center">
-    <div class="container boxConf center row my-4 pt-5">
-      <div class="col offset-1">
+  <main class="d-flex  justify-content-center">
+    <div class="card">
+    <div class="card-body boxConf row my-4 pt-5">
+      <div class="col-12 col-md-4 offset-md-1">
         <img src="../img/avatar/botella1.png" class="img-thumbnail" alt="Avatar">
-        <div class="col-10 mt-3">
+        <div class="col-4 col-md-7 mt-3">
           <select id="inputAvatar" class="form-select">
             <option selected>Choose Avatar</option>
             <option>botella1</option>
@@ -77,9 +78,22 @@
             <option>botella12</option>
           </select>
         </div>
+        <div class="col mt-3 ">
+          <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
+        </div>
+        <div class="col-4 col-md-10 d-none">
+          <label for="inputNombre" class="form-label">Contraseña Vieja</label>
+          <input type="text" class="form-control" value="Juan" id="inputNombre" >
+        </div>
+        <div class="col-4 col-md-10 d-none">
+          <label for="inputNombre" class="form-label">Contraseña Nueva</label>
+          <input type="text" class="form-control" value="Juan" id="inputNombre">
+        </div>
+      
+        
       </div>
-
-        <div class="col-6 ">   
+      
+        <div class="col-6 col-md-6 ">   
       <form class="row g-3">
         <div class="col-md-6">
           <label for="inputNombre" class="form-label">Nombre</label>
@@ -101,47 +115,46 @@
           <label for="inputTelefono" class="form-label">Telefono</label>
           <input type="number" class="form-control" id="inputTelefono">
         </div>
-        <!-- <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div> -->
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
+        
+        <div class="col-md-12">
+          <label for="inputZip" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="inputZip">
         </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
+        
       </form>
     </div>
+    <div class="row">
+
+      <div class="col-12 col-md-1 offset-md-5 py-2">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+      <div class="col-12 col-md-5 offset-md-1 py-1">
+        <button type="submit" class="btn btn-primary">Cancelar</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 offset-md-5 py-2 ps-md-5">
+        <span role="button" >Eliminar cuenta</span>
+      </div>
+    </div>
   </div>
+</div>
   </main>
 
-  <footer class="navbar row bottom py-3" id="footer">
+  <footer class="navbar row sticky-bottom container-fluid py-3" id="footer">
     
-      <div class="col-12 col-sm-3 offset-5 offset-sm-0">
+      <div class="col-12 col-sm-3 ms-1 offset-sm-0">
         <div class="containerImg">
         <a class="navbar-brand" href="./home.html"
           ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
         /></a>
       </div>
       </div>
-      <div class="col-12 col-sm-5 py-3 offset-4 offset-sm-0 copyImg">
+      <div class="col-12 col-sm-5 py-3 ms-4 offset-sm-0 copyImg">
         <a class="navbar-brand" href="./home.html">
         <img src="../img/copyright.jpeg" class="img-thumbnail" alt="logo"/></a>        
       </div>
-      <div class="col-12 col-sm-3 text-center">
+      <div class="col-12 col-sm-3 ms-2">
         <a href="#" class="nav-link">Tabaja con nosotros</a>
         <a href="#" class="nav-link">Donde estamos</a>
       </div>

@@ -19,7 +19,8 @@ body{
 
 .boxConf{
     
-    width: 100vh;
+    
+
     background-color:antiquewhite;
     -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
     box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
@@ -33,12 +34,7 @@ body{
 }
 
 /*-------------------- FOOTER------------------------------------ */
-/* #footer {
-    background-color: rgb(244, 67, 54);
-    min-height: 5rem;
-    padding: 2rem;
-    text-align: center;
-  } */
+
 #footer a{
     text-decoration: none;
     color:white;
