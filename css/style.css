@@ -1,6 +1,5 @@
 body{
-    padding: 0;
-    margin: 0;
+    position: relative;
 }
 
 .navbar{
@@ -9,7 +8,7 @@ body{
 }
 .containerImg{
     
-    width:8rem;
+    width:5rem;
 }
 .letraNavBar{
     font-size: 1rem 
@@ -34,24 +33,22 @@ body{
 }
 
 /*-------------------- FOOTER------------------------------------ */
-#footer {
-    background-color: black;
-    min-height: 0.8rem;
+/* #footer {
+    background-color: rgb(244, 67, 54);
+    min-height: 5rem;
     padding: 2rem;
-    font-size: 0.8rem ;
-    
-}
+    text-align: center;
+  } */
 #footer a{
     text-decoration: none;
     color:white;
     
     
 }
-.contenedorImg{
-    
-    width: max-width;
-
+.copyImg{
+    width: 15rem;
 }
+
 #error404{
     
     width: 70%;
