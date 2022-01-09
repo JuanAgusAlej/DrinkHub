@@ -5,9 +5,9 @@ body{
 
 .navbar{
     background-color:black;
-
- 
 }
+
+
 .navbarContainer{
     padding:0px;
 }
@@ -47,7 +47,7 @@ body{
 
 #footer a{
     text-decoration: none;
-    color:white;
+    color:rgba(255,255,255,.55);
     
     
 }
