@@ -13,11 +13,13 @@
     <title>Sign Up</title>
 </head>
 <body class="body-login">
-    <form action="">
+    <form action="" class="form-body">
         <h2>Bienvenidos a Drink Hub</h2>
         <input type="email" placeholder="Email" name="email">
         <input type="password" placeholder="Contraseña" name="password">
-        <input type="submit" value="Ingresar">
+        <button type="submit">
+          <a href="./home.html">Ingresar</a>
+      </button>
         <h5><a class="login_link" href="#" data-bs-toggle="modal" data-bs-target="#modalresgistro">
             ¿No tienes una cuenta? Registrate</a></h5>
     </form>
@@ -37,7 +39,11 @@
             <input type="text" placeholder="Apellido" name="apellido">
             <input type="email" placeholder="Email" name="email">
             <input type="password" placeholder="Contraseña" name="password">
-            <input type="submit" value="Registrar">
+            <div class="d-grid gap-2">
+              <button class="btn btn-dark" type="button">
+                <a href="./login.html">Registar</a>
+              </button>
+            </div>
       </div>
     </div>
   </div>
