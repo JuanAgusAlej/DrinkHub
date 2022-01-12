@@ -28,11 +28,11 @@ form {
 }
 
 form button[type="submit"] {
+    text-decoration: none;
     width: 100%;
-    background-color: black;
+    background: #48A65D;
     border: none;
     padding: 12px;
-    color: white;
     margin-bottom: 16px;
     font-size: 16px;
 }
@@ -57,14 +57,19 @@ h5 {
     color: black;
 }
 
+.login_link {
+    text-decoration: none;
+    color: black;
+}
+
 modal-body button [type="submit"] {
     width: 100%;
     background-color: black;
     border: none;
     padding: 12px;
-    color: white;
     margin-bottom: 16px;
     font-size: 16px;
+    text-decoration: none;
 
 }
 
