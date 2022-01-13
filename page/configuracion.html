@@ -15,11 +15,11 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm  p-2 navbar-dark">
+    <nav class="navbar navbar-expand-sm  navbar-dark">
       <div class="container-fluid navbarContainer">
-        <div class="containerImg ">
+        <div class="containerImg ms-1">
         <a class="navbar-brand" href="./home.html"
-          ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
+          ><img src="../img/logo.png" class="img-fluid" alt="logo"
         /></a>
       </div>
         <button
@@ -57,84 +57,73 @@
     </nav>
   </header>
   <main class="d-flex  justify-content-center">
-    <div class="card">
+    <div class="card" id="datos">
     <div class="card-body boxConf row my-4 pt-5 ">
       <div class="col-12 col-md-4 offset-md-1 px-md-3 ">
-        <img src="../img/avatar/botella1.png" class="img-thumbnail" alt="Avatar">
-        <div class="col-6 col-md-7 mt-3">
+      <div id="avatar">
+        <!-- <img src="../img/avatar/default.png" class="img-thumbnail" alt="Avatar"> -->
+      </div>
+        <div class="col-6 col-md-10 my-3">
           <select id="inputAvatar" class="form-select">
-            <option selected>Choose Avatar</option>
-            <option>botella1</option>
-            <option>botella2</option>
-            <option>botella3</option>
-            <option>botella4</option>
-            <option>botella5</option>
-            <option>botella6</option>
-            <option>botella7</option>
-            <option>botella8</option>
-            <option>botella9</option>
-            <option>botella10</option>
-            <option>botella11</option>
-            <option>botella12</option>
-          </select>
+            </select>
         </div>
-        <div class="col mt-3 ">
-          <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
+        <div class="col " id="cambiarPass">
+          <button type="submit" class="btn btn-primary" onClick="cambiarPassword()">Cambiar contraseña</button>
         </div>
-        <div class="col-6 col-md-10 d-none">
-          <label for="inputNombre" class="form-label">Contraseña Vieja</label>
-          <input type="text" class="form-control" value="Juan" id="inputNombre" >
+        <div class="d-none" id="mostrarCambiarPass">
+        <div class="col-6 col-md-10">
+          <label for="passVieja" class="form-label">Contraseña Vieja</label>
+          <input type="password" class="form-control" id="passñaVieja" >
         </div>
-        <div class="col-6 col-md-10 d-none">
-          <label for="inputNombre" class="form-label">Contraseña Nueva</label>
-          <input type="text" class="form-control" value="Juan" id="inputNombre">
+        <div class="col-6 col-md-10">
+          <label for="passNueva" class="form-label">Contraseña Nueva</label>
+          <input type="password" class="form-control" id="passNueva">
         </div>
-      
+      </div>
         
       </div>
       
-        <div class="col-6 col-md-6 ">   
+        <div class="col-12 col-md-6 " >   
       <form class="row g-3">
-        <div class="col-md-6">
+        <div class="col-10 col-md-5 ">
           <label for="inputNombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" value="Juan" id="inputNombre" disabled>
+          <input type="text" class="form-control" id="inputNombre" disabled>
         </div>
-        <div class="col-md-6">
+        <div class="col-10 col-md-5 offset-md-1">
           <label for="inputApellido" class="form-label">Apellido</label>
-          <input type="text" class="form-control" value="Alejandro" id="inputApellido" disabled>
+          <input type="text" class="form-control" id="inputApellido" disabled>
         </div>
-        <div class="col-12">
+        <div class="col-10">
           <label for="inputNacimiento" class="form-label">Nacimiento</label>
           <input type="date" class="form-control" id="inputNacimiento" value="1994-05-18" disabled>
         </div>
-        <div class="col-6">
+        <div class="col-10 col-md-5">
           <label for="inputNick" class="form-label">Nick</label>
           <input type="text" class="form-control" id="inputNick" value="Borracho68">
         </div>
-        <div class="col-md-6">
+        <div class="col-10 col-md-5 offset-md-1">
           <label for="inputTelefono" class="form-label">Telefono</label>
           <input type="number" class="form-control" id="inputTelefono">
         </div>
         
-        <div class="col-md-12">
+        <div class="col-10 col-md-10">
           <label for="inputZip" class="form-label">Correo</label>
-          <input type="email" class="form-control" id="inputZip">
+          <input type="email" class="form-control" id="inputCorreo">
         </div>
         
       </form>
     </div>
-    <div class="row">
 
-      <div class="col-12 col-md-1 offset-md-5 py-2">
-        <button type="submit" class="btn btn-primary">Guardar</button>
-      </div>
-      <div class="col-12 col-md-5 offset-md-1 py-1">
-        <button type="submit" class="btn btn-primary">Cancelar</button>
+    <div class="row ">
+
+      <div class="col-12 d-grid gap-2 col-md-5 mx-auto py-3">
+        <a onclick="cambiarDatos()" class="btn btn-primary">Guardar</a>
+        <a href="home.html" class="btn btn-primary">Cancelar</a>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-md-4 offset-md-5 py-2 ps-md-5">
-        <span role="button" >Eliminar cuenta</span>
+      <div class="col-12 text-md-center py-2">
+        <span role="button" onClick="eliminarCuenta()" >Eliminar cuenta</span>
       </div>
     </div>
   </div>
@@ -143,10 +132,10 @@
 
   <footer class="navbar row sticky-bottom container-fluid py-3" id="footer">
     
-      <div class="col-12 col-sm-3 ms-1 offset-sm-0">
-        <div class="containerImg">
+      <div class="col-12 col-sm-3 ms-1 offset-sm-0 ">
+        <div class="containerImg ">
         <a class="navbar-brand" href="./home.html"
-          ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
+          ><img src="../img/logo.png" class="img-fluid" alt="logo"
         /></a>
       </div>
       </div>
@@ -154,7 +143,7 @@
         <a class="navbar-brand" href="./home.html">
         <img src="../img/copyright.jpeg" class="img-thumbnail" alt="logo"/></a>        
       </div>
-      <div class="col-12 col-sm-3 ms-2">
+      <div class="col-12 col-sm-3 ms-2 ">
         <a href="#" class="nav-link">Tabaja con nosotros</a>
         <a href="#" class="nav-link">Donde estamos</a>
       </div>
@@ -163,6 +152,7 @@
   
   </footer>
   <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="../app/configuracion.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
