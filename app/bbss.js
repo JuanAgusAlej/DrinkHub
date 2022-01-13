@@ -93,6 +93,106 @@ const agregarUsuario = function () {
   
     localStorage.setItem('users', JSON.stringify(usuarios) )
 };
+const agregarNosotros = function () {
+    
+    usuarios.push(
+      new Usuario(
+          "Lara",
+          "Sp",
+          "1945-2-29",
+          "LaMasBorracha",
+          "154621",
+          "LS45@gmail.com",
+          "14789"
+      )
+    );
+    usuarios.push(
+        new Usuario(
+            "Pedro",
+            "Lopez",
+            "1976-11-28",
+            "PL28",
+            "54631",
+            "pl28@gmail.com",
+            "14789"
+        )
+    );
+    usuarios.push(
+        new Usuario(
+            "Alberto",
+            "Perez",
+            "1954-03-30",
+            "Alberto_54",
+            "54831",
+            "Alberto_54@gmail.com",
+            "14789"
+        )
+    );
+    usuarios.push(
+        new Usuario(
+            "Santiago",
+            "Tibulo",
+            "1994-05-23",
+            "Borracho100",
+            "945284",
+            "st94@gmail.com",
+            "14789",
+            true
+        )
+      );
+  
+    localStorage.setItem('users', JSON.stringify(usuarios) )
+};
+const agregarReceta = function () {
+    
+    usuarios.push(
+      new Usuario(
+          "Lara",
+          "Sp",
+          "1945-2-29",
+          "LaMasBorracha",
+          "154621",
+          "LS45@gmail.com",
+          "14789"
+      )
+    );
+    usuarios.push(
+        new Usuario(
+            "Pedro",
+            "Lopez",
+            "1976-11-28",
+            "PL28",
+            "54631",
+            "pl28@gmail.com",
+            "14789"
+        )
+    );
+    usuarios.push(
+        new Usuario(
+            "Alberto",
+            "Perez",
+            "1954-03-30",
+            "Alberto_54",
+            "54831",
+            "Alberto_54@gmail.com",
+            "14789"
+        )
+    );
+    usuarios.push(
+        new Usuario(
+            "Santiago",
+            "Tibulo",
+            "1994-05-23",
+            "Borracho100",
+            "945284",
+            "st94@gmail.com",
+            "14789",
+            true
+        )
+      );
+  
+    localStorage.setItem('users', JSON.stringify(usuarios) )
+};
 
 //agregarUsuario();
 // // const prueba = function() {
