@@ -14,6 +14,16 @@ class Usuario{
     
 }
 
+class Nosotros{
+    constructor(nombre, apellido, skill, descripcion) {
+        this.nombre = nombre
+        this.apellido = apellido
+        this.skill = skill
+        this.descripcion = descripcion
+
+    }
+}
+
 class Receta{
     constructor(titulo, ingrediente, preparacion, imagen, autor) {
         this.id = new Date().getTime()
