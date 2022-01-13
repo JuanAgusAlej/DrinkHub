@@ -1,19 +1,20 @@
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
-
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Iniciar Sesion</title>
+<!doctype html>
+<html lang="es" class="index">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Sign Up</title>
 </head>
-<body>
+
+<body >
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark ">
       <div class="container-fluid navbarContainer">
@@ -55,6 +56,18 @@
       </div>
     </nav>
   </header>
+  <main class="body-login">
+    <form action="" class="form-body-index">
+        <h2 class="titulo-index">Bienvenidos a Drink Hub</h2>
+        <input class="input-index" type="email" placeholder="Email" name="email">
+        <input class="input-index" type="password" placeholder="Contraseña" name="password">
+        <button type="submit" class="button-form-index">
+          <a class="login_link" href="./home.html">Ingresar</a>
+      </button>
+        <h5 class="registrate-index"><a class="login_link" href="#" data-bs-toggle="modal" data-bs-target="#modalresgistro">
+            ¿No tienes una cuenta? Registrate</a></h5>
+    </form>
+  </main>
   
   <footer class="navbar row sticky-bottom container-fluid py-3" id="footer">
     
@@ -77,11 +90,35 @@
   
   
   </footer>
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+    <!-- Modal -->
+  <div class="modal fade" id="modalresgistro" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-center">
+        <div class="modal-header text-center">
+          <h4 class="modal-title text-center" id="staticBackdropLabel">Registro de Usuario</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            <input class="input-index" type="text" placeholder="Nombre" name="nombre">
+            <input class="input-index" type="text" placeholder="Apellido" name="apellido">
+            <input class="input-index" type="date" placeholder="Fecha de Nacimiento" name="fechaDeNacimiento">
+            <input class="input-index" type="email" placeholder="Email" name="email">
+            <input class="input-index" type="password" placeholder="Contraseña" name="password">
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" type="button">
+                <a class="login_link" href="./index.html">Registar</a>
+              </button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
 </body>
 </html>

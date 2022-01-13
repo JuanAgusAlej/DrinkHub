@@ -1,7 +1,82 @@
-body{
-    position: relative;
+/* ---------------------INDEX LOGUIN------------------------------- */
+.index {
+    margin: 0;
+    padding: 0;
+    font-family: 'calibri';
+    box-sizing: border-box;
+}
+
+.body-login {
+    background: url(../img/chuttersnap-9UD0JHnWyVE-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex; 
+    min-height: 70vh; 
+}
+
+.form-body-index {
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border: black;
+    padding: 50px;
+    box-shadow: 7px 13px 40px black;
     
 }
+
+.button-form-index{
+    text-decoration: none;
+    width: 100%;
+    background: #48A65D;
+    border: none;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.titulo-index {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.input-index {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.registrate-index {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.login_link {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@media (max-width: 768px) {
+    .form-body-index {
+        width: 75%;
+    }
+}
+
+@media (max-width:480px) {
+    .form-body-index {
+        width: 95%;
+    }
+}
+/* ---------------------INDEX LOGUIN------------------------------- */
 
 .navbar{
     background-color:black;
