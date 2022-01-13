@@ -13,7 +13,50 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Sign Up</title>
 </head>
-<body class="body-login">
+
+<body >
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark ">
+      <div class="container-fluid navbarContainer">
+        <div class="containerImg">
+          <a class="navbar-brand" href="./home.html"
+            ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+          <div class="d-flex justify-content-end">
+            <ul class="navbar-nav letraNavBar">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./page/ecommers.html"
+                  >Ecommers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./page/quienesSomos.html"
+                  >Quienes Somos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./page/sugerencia.html">Sugerencia</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="body-login">
     <form action="" class="form-body-index">
         <h2 class="titulo-index">Bienvenidos a Drink Hub</h2>
         <input class="input-index" type="email" placeholder="Email" name="email">
@@ -24,8 +67,29 @@
         <h5 class="registrate-index"><a class="login_link" href="#" data-bs-toggle="modal" data-bs-target="#modalresgistro">
             ¿No tienes una cuenta? Registrate</a></h5>
     </form>
+  </main>
+  
+  <footer class="navbar row sticky-bottom container-fluid py-3" id="footer">
     
-
+      <div class="col-12 col-sm-3 ms-1 offset-sm-0">
+        <div class="containerImg">
+        <a class="navbar-brand" href="./home.html"
+          ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
+        /></a>
+      </div>
+      </div>
+      <div class="col-12 col-sm-5 py-3 ms-4 offset-sm-0 copyImg">
+        <a class="navbar-brand" href="./home.html">
+        <img src="../img/copyright.jpeg" class="img-thumbnail" alt="logo"/></a>        
+      </div>
+      <div class="col-12 col-sm-3 ms-2">
+        <a href="#" class="nav-link">Tabaja con nosotros</a>
+        <a href="#" class="nav-link">Donde estamos</a>
+      </div>
+    
+  
+  
+  </footer>
     <!-- Modal -->
   <div class="modal fade" id="modalresgistro" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -55,6 +119,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    
+
 </body>
 </html>

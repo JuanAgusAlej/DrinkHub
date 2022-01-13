@@ -13,7 +13,7 @@
     -o-background-size: cover;
     background-size: cover;
     display: flex; 
-    min-height: 100vh; 
+    min-height: 70vh; 
 }
 
 .form-body-index {
@@ -77,3 +77,60 @@
     }
 }
 /* ---------------------INDEX LOGUIN------------------------------- */
+
+.navbar{
+    background-color:black;
+
+ 
+}
+.navbarContainer{
+    padding:0px;
+}
+.containerImg{
+    
+    width:5rem;
+}
+.letraNavBar{
+    font-size: 1rem 
+    
+}
+
+/* -----------------------------------main------------------------------- */
+.fondoError404{
+    background-color:white;
+}
+.boxConf{
+    width: 80vw;
+    
+
+    
+    -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
+    box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
+
+}
+#inputTelefono{
+  
+  -webkit-appearance: textfield ; 
+
+
+}
+
+/*-------------------- FOOTER------------------------------------ */
+.row{
+    --bs-gutter-x: 0;
+}
+
+#footer a{
+    text-decoration: none;
+    color:white;
+    
+    
+}
+.copyImg{
+    width: 15rem;
+}
+
+#error404{
+    
+    width: 70%;
+}
