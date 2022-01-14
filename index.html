@@ -16,13 +16,11 @@
 
 <body >
   <header>
-    <nav class="navbar navbar-expand-sm navbar-dark ">
-      <div class="container-fluid navbarContainer">
-        <div class="containerImg ms-1">
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <div class="container">
           <a class="navbar-brand" href="./home.html"
-            ><img src="../img/logo.png" class="img-fluid" alt="logo"
+            ><img src="../img/logo.png" class="img-fluid containerImg" alt="logo"
           /></a>
-        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -36,19 +34,19 @@
         </button>
         <div class="collapse navbar-collapse row" id="navbarSupportedContent">
           <div class="d-flex justify-content-end">
-            <ul class="navbar-nav letraNavBar">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./page/ecommers.html"
-                  >Ecommers</a
+            <ul class="navbar-nav letraNavBar2">
+              <li class="nav-item align-text-center">
+                <a class="btn btn-outline-light boton-style" aria-current="page" href="./page/ecommers.html"
+                  ><i class="fas fa-store-alt"></i></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./page/quienesSomos.html"
+                <a class="btn btn-outline-light boton-style" href="./page/quienesSomos.html"
                   >Quienes Somos</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./page/sugerencia.html">Sugerencia</a>
+                <a class="btn btn-outline-light boton-style" href="./page/sugerencia.html">Sugerencias</a>
               </li>
             </ul>
           </div>
@@ -69,27 +67,27 @@
     </form>
   </main>
   
-  <footer class="navbar row sticky-bottom container-fluid py-3" id="footer">
-    
-      <div class="col-12 col-sm-3 ms-1 offset-sm-0">
-        <div class="containerImg">
-        <a class="navbar-brand" href="./home.html"
-          ><img src="../img/logo.png" class="img-fluid" alt="logo"
-        /></a>
+  <footer id="footer">
+    <div class="container">
+      <div class="row align-items-center">
+         <div class="col-12 col-md-1 text-md-center">
+            <a class="navbar-brand" href="./home.html"><img class="containerImg-footer" src="../img/logo.png" class="img-fluid" alt="logo"/></a>
+         </div>
+        <div class="col-12 col-md-4 offset-md-3">
+          <div class="row text-center">
+            <a class="navbar-brand mx-3 text-white fs-3 font-bold"><i class="fas fa-glass-cheers"></i>  DrinkHub  <i class="fas fa-glass-cheers"></i></a>
+         </div>
+         <div class="row text-center">
+           <a class="navbar-brand mx-3 text-white fs-8 font-bold">© Derechos Reservados</a>
+         </div> 
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="#" class="btn btn-outline-light boton-style-footer my-3 fw-light">Trabaja con nosotros</a>
+          <a href="#" class="btn btn-outline-light boton-style-footer my-3 fw-light" >Contactanos</a>
+        </div>
       </div>
-      </div>
-      <div class="col-12 col-sm-5 py-3 ms-4 offset-sm-0 copyImg">
-        <a class="navbar-brand" href="./home.html">
-        <img src="../img/copyright.jpeg" class="img-thumbnail" alt="logo"/></a>        
-      </div>
-      <div class="col-12 col-sm-3 ms-2">
-        <a href="#" class="nav-link">Tabaja con nosotros</a>
-        <a href="#" class="nav-link">Donde estamos</a>
-      </div>
-    
-  
-  
-  </footer>
+     </div>
+ </footer>
     <!-- Modal -->
   <div class="modal fade" id="modalresgistro" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -119,6 +117,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://kit.fontawesome.com/ebf846398f.js" crossorigin="anonymous"></script>
 </body>
 </html>
