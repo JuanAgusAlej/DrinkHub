@@ -115,6 +115,7 @@
 	font-size: 1rem;
 }
 
+<<<<<<< HEAD
 .letraNavBar2 {
 	font-size: 2rem;
 }
@@ -137,12 +138,14 @@
 	font-weight: 200;
 	font-size: 12px;
 }
+=======
+>>>>>>> parent of e3c8015 (Cambios)
 /* -----------------------------------main------------------------------- */
 .fondoError404{
     background-color:white;
 }
 .boxConf{
-    width: 70vw;
+    width: 80vw;
     
 
     
