@@ -8,14 +8,13 @@
 	background-color: blanchedalmond;
 	min-height: 100vh;
 }
+.boxHome{
+       
+    -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
+    box-shadow: 2px 1px 2px rgba(0,0,0,0.5);
+    
+}
 
-.navbar {
-	background-color: black;
-	padding: 0px;
-}
-.containerImg {
-	width: 8rem;
-}
 /* ---------------------INDEX LOGUIN------------------------------- */
 .index {
     margin: 0;
@@ -96,6 +95,7 @@
 }
 /* ---------------------INDEX LOGUIN------------------------------- */
 
+/* ---------------------NavBar------------------------------- */
 .navbar{
     background-color:black;
 }
@@ -115,7 +115,6 @@
 	font-size: 1rem;
 }
 
-<<<<<<< HEAD
 .letraNavBar2 {
 	font-size: 2rem;
 }
@@ -138,22 +137,25 @@
 	font-weight: 200;
 	font-size: 12px;
 }
-=======
->>>>>>> parent of e3c8015 (Cambios)
-/* -----------------------------------main------------------------------- */
+/* ---------------------NavBar------------------------------- */
+/* -----------------------------------Configuracion------------------------------- */
 .fondoError404{
     background-color:white;
 }
+#main-configuracion{
+    width:100vw;
+    height:50vh;
+}
 .boxConf{
-    width: 80vw;
-    
-
-    
+    width: 50vw;
+    height: 10%;
+       
     -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
     box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
 }
+/* -----------------------------------Configuracion------------------------------- */
 html {
-	font-size: 70%;
+	font-size: 80%;
 }
 
 /* body {
@@ -171,26 +173,23 @@ html {
 }
 
 /*-------------------- FOOTER------------------------------------ */
-#footer {
+footer {
 	background-color: black;
 	min-height: 0.8rem;
 	padding: 0.5rem;
 	font-size: 0.8rem;
 	position: sticky;
+    width: 100%;
 	top: 100%;
 }
-#footer a {
+footer a {
 	text-decoration: none;
 }
-.contenedorImg {
-	width: max-width;
-}
 
 
 
-.copyImg{
-    width: 15rem;
-}
+
+
 
 #error404{
     
