@@ -12,6 +12,9 @@
   />
   <link rel="stylesheet" href="../css/style.css" />
   <title>Sugerencia</title>
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 <body>
   <header>
@@ -57,41 +60,48 @@
   </header>
   <main>
     <section id="sugerencia" class="tm-bg-color-5 tm-mb-3">
-      <div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;">
-      <div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);">
-      <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
-      <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
-      <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div>
-      <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;">
-      </div>
-    </div>
-  </div>
-
-
-        <div class="imagen-sugerencia col-4">
+      <div class="container-fluid">
+        <div class=row>
+          <div id="imagen-sugerencia" class= "d-none d-lg-block col-lg-4">
             <img
             src="../img/imagensugerencias.jpg"
             class="img-fluid"
             id="imagen-sugerencia"
             alt="imagen-sugerencia"
-          />
+            />
+         </div>
+         <div id="fomulario-sugerencias" class="col-md-12 col-lg-4">
+          <h3>Dejanos tus datos</h3>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Dirección de Correo Electrónico</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@mail.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Sugerencia</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
         </div>
-      <div class="fomulario col-4">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+        <div id="texto-sugerencia" class="col-md-12 col-lg-4"> 
+          <h3>Queremos escucharte</h3>
+          <p id="parrafo-sugerencias"> Dejanos tus sugerencia para que sigamos mejorando Dirnk Hub</p>
+          <p id="parrafo-sugerencias"> Seguinos en nuestras redes sociales</p>
+            <i class="fab fa-instagram fa-6x"></i>
+            <i class="fab fa-facebook fa-6x"></i>
+
+
+
         </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Dirección de Correo Electrónico</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@mail.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Sugerencia</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
       </div>
+      </div>
+  </div>
+   
     </row>
     </section>
   </main>
