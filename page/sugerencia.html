@@ -17,49 +17,9 @@
 
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-dark ">
-      <div class="container-fluid navbarContainer">
-        <div class="containerImg">
-          <a class="navbar-brand " href="./home.html"
-            ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
-          /></a>
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-          <div class="d-flex justify-content-end">
-            <ul class="navbar-nav letraNavBar">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./ecommers.html"
-                  >Ecommers</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./quienesSomos.html"
-                  >Quienes Somos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./sugerencia.html">Sugerencia</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+  
   <main>
-    <section id="sugerencia" class="tm-bg-color-5 tm-mb-3">
+    <section id="seccion-sugerencia" class="tm-bg-color-5 tm-mb-3">
       <div class="container-fluid">
         <div class=row>
           <div id="imagen-sugerencia" class= "d-none d-lg-block col-lg-4">
@@ -73,26 +33,29 @@
          <div id="fomulario-sugerencias" class="col-md-12 col-lg-4">
           <h3>Dejanos tus datos</h3>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+            <input type="text" class="form-control" id="nombre"placeholder="Nombre" aria-label="Nombre">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+            <input type="text" class="form-control" placeholder="Apellido" id="apellido" aria-label="Apellido">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Dirección de Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@mail.com">
+            <input type="email" class="form-control" id="email" placeholder="nombre@mail.com">
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Sugerencia</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
+            <label for="exampleFormControlTextarea1" class="form-label" >Sugerencia</label>
+            <input type="text" class="form-control" id="sugerencia" placeholder="queremos que nos ayudes a mejorar">
+                     </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button" onclick="getData()">Enviar</button>
+                      </div>
         </div>
         <div id="texto-sugerencia" class="col-md-12 col-lg-4"> 
           <h3>Queremos escucharte</h3>
           <p id="parrafo-sugerencias"> Dejanos tus sugerencia para que sigamos mejorando Dirnk Hub</p>
           <p id="parrafo-sugerencias"> Seguinos en nuestras redes sociales</p>
-            <i class="fab fa-instagram fa-6x"></i>
-            <i class="fab fa-facebook fa-6x"></i>
+            <i class="fab fa-instagram fa-3x"></i>
+            <i class="fab fa-facebook fa-3x"></i>
 
 
 
@@ -101,36 +64,10 @@
       </div>
       </div>
   </div>
-   
-    </row>
-    </section>
-  </main>
-  <footer class="navbar row sticky-bottom container-fluid py-3" id="footer">
-    
-    <div class="col-12 col-sm-3 ms-1 offset-sm-0">
-      <div class="containerImg">
-      <a class="navbar-brand" href="./home.html"
-        ><img src="../img/logo.jpeg" class="img-fluid" alt="logo"
-      /></a>
-    </div>
-    </div>
-    <div class="col-12 col-sm-5 py-3 ms-4 offset-sm-0 copyImg">
-      <a class="navbar-brand" href="./home.html">
-      <img src="../img/copyright.jpeg" class="img-thumbnail" alt="logo"/></a>        
-    </div>
-    <div class="col-12 col-sm-3 ms-2">
-      <a href="#" class="nav-link">Tabaja con nosotros</a>
-      <a href="#" class="nav-link">Donde estamos</a>
-    </div>
-  
-
-
-</footer>
+     </main>
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+  <script type="text/javascript" src="../app/sugerencia.js">
+
+  </script>
 </body>
 </html>
