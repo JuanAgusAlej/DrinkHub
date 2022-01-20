@@ -13,38 +13,37 @@
     <title>Sign Up</title>
 </head>
 <body class="body-login">
-    <form action="" class="form-body">
+    <form class="login-form" id="login-formulario">
         <h2>Bienvenidos a Drink Hub</h2>
-        <input type="email" placeholder="Email" name="email">
-        <input type="password" placeholder="Contraseña" name="password">
-        <button type="submit">
-          <a class="login_link" href="./home.html">Ingresar</a>
-      </button>
-        <h5><a class="login_link" href="#" data-bs-toggle="modal" data-bs-target="#modalresgistro">
+        <input required type="email" placeholder="Email" name="email" id="login-email">
+        <input required type="password" placeholder="Contraseña" name="password" id="login-pass">
+        <div class="d-grid gap-2">
+          <button class="btn btn-success" type="submit">Ingresar</button>
+        </div>
+        <h5><a class="login_link" href="#" data-bs-toggle="modal" data-bs-target="#modal-resgistro">
             ¿No tienes una cuenta? Registrate</a></h5>
     </form>
     
 
     <!-- Modal -->
-  <div class="modal fade" id="modalresgistro" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="modal-resgistro" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content text-center">
-        <div class="modal-header text-center">
-          <h4 class="modal-title text-center" id="staticBackdropLabel">Registro de Usuario</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
         
-        <div class="modal-body">
-            <input type="text" placeholder="Nombre" name="nombre">
-            <input type="text" placeholder="Apellido" name="apellido">
-            <input type="email" placeholder="Email" name="email">
-            <input type="password" placeholder="Contraseña" name="password">
+        <form class="registro-form" id="registro-formulario">
+          <h4>Registro de Usuario</h4>
+            <input required type="text" placeholder="Nombre" name="nombre" id="registro-nombre">
+            <input required type="text" placeholder="Apellido" name="apellido" id="registro-apellido">
+            <input required type="email" placeholder="Email" name="email" id="registro-email">
+            <input required type="password" placeholder="Contraseña" name="password" id="registro-pass">
             <div class="d-grid gap-2">
-              <button class="btn btn-success" type="button">
-                <a class="login_link" href="./login.html">Registar</a>
-              </button>
+              <button class="btn btn-dark" type="submit">Registar</button>
             </div>
-      </div>
+            <br>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </form>
     </div>
   </div>
 
@@ -53,6 +52,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="../app/login.js"></script>
     
 </body>
 </html>

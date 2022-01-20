@@ -15,7 +15,7 @@
     min-height: 100vh; 
 }
 
-form {
+.login-form {
     margin: auto;
     width: 50%;
     max-width: 500px;
@@ -27,14 +27,14 @@ form {
     
 }
 
-form button[type="submit"] {
+.login-form button[type="submit"] {
     text-decoration: none;
     width: 100%;
-    background: #48A65D;
+    background: rgba(0, 0, 0, 0.856);
     border: none;
     padding: 12px;
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 h2 {
@@ -62,7 +62,7 @@ h5 {
     color: black;
 }
 
-modal-body button [type="submit"] {
+.modal-body button [type="submit"] {
     width: 100%;
     background-color: black;
     border: none;
@@ -74,13 +74,19 @@ modal-body button [type="submit"] {
 }
 
 @media (max-width: 768px) {
-    form {
+    .login-form {
         width: 75%;
     }
 }
 
 @media (max-width:480px) {
-    form {
+    .login-form {
         width: 95%;
     }
+}
+
+.registro-form {
+    padding: 32px 30px;
+    margin-bottom: 16px;
+    font-size: 16px;  
 }
