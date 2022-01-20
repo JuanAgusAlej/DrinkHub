@@ -24,7 +24,7 @@ const agregarUsuario = function () {
           telefono:"945284",
           correo:"sdfh@gmail.com",
         pass: "14789",
-          imagen:"0"
+          imagen:"botella0"
           }
         
   
@@ -56,7 +56,14 @@ inputCorreo.value = usuario.correo
 console.log(usuario)
 console.log(usuario.imagen)
 let modificarPass = false
+const verificacionLoguin = function () {
 
+    if (!localStorage.getItem("user")) {
+        location.href='../index.html'
+    }
+
+}
+verificacionLoguin()
 const mostrarAvatar = function () {
     let inputAvatar = document.getElementById("inputAvatar") 
     let option = ""
@@ -204,11 +211,4 @@ const eliminarCuenta = function () {
     location.reload()
 }
 
-const verificacionLoguin = function () {
 
-    if (!localStorage.getItem("user")) {
-        location.href='../index.html'
-    }
-
-}
-//verificacionLoguin()
