@@ -197,18 +197,22 @@ const cambiarDatos = function () {
     usuario.imagen = document.getElementById("inputAvatar").value
     localStorage.setItem('user', JSON.stringify(usuario))
     localStorage.setItem('users', JSON.stringify(usuarios))
-    location.href = './configuracion.html'
+    location.href = './home.html'
 }
 
 const eliminarCuenta = function () {
-    let iUsuario = usuarios.findIndex(function (item) {
-        return item.correo === usuario.correo
-    })
-    usuarios.splice(iUsuario, 1);
-    localStorage.setItem('users', JSON.stringify(usuarios))
     
-    localStorage.removeItem("user");
-    location.reload()
+    if (window.confirm("Estas seguro que queres eliminar la cuenta?")) {
+        
+         let iUsuario = usuarios.findIndex(function (item) {
+             return item.correo === usuario.correo
+         })
+         usuarios.splice(iUsuario, 1);
+         localStorage.setItem('users', JSON.stringify(usuarios))
+         localStorage.removeItem("user");
+         location.reload()
+        
+    }
 }
 
 
