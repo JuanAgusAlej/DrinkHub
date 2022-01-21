@@ -13,40 +13,49 @@
   </head>
   <body class="home-main">
     <header>
-      <nav class="navbar navbar-expand-sm navbar-dark">
+      <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
             <a class="navbar-brand " href="./home.html"
               ><img src="../img/logo.png" class="img-fluid containerImg" alt="logo"
             /></a>
           <button
             class="navbar-toggler"
+            onClick="cargarNavbar()"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-            <div class="d-flex justify-content-end">
-              <ul class="navbar-nav letraNavBar2">
-                <li class="nav-item align-text-center">
-                  <a class="btn btn-outline-light boton-style" aria-current="page" href="./ecommers.html"
-                    ><i class="fas fa-store-alt"></i></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-outline-light boton-style" href="./quienesSomos.html"
-                    >Quienes Somos</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-outline-light boton-style" href="./sugerencia.html">Sugerencias</a>
-                </li>
-              </ul>
-            </div>
+          <div class="collapse navbar-collapse row " id="navbarSupportedContent">
+            <div class="d-flex justify-content-end ">
+              
+
+                <ul class="navbar-nav letraNavBar2">
+                  <li class="nav-item align-text-center">
+                    <a class="btn btn-outline-light boton-style" aria-current="page" href="./ecommers.html"
+                      ><i class="fas fa-store-alt"></i></a
+                    >
+                  </li>
+                  <li class="nav-item m-0">
+                    <a class="btn btn-outline-light boton-style" href="./quienesSomos.html"
+                      >Quienes Somos</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-light boton-style" href="./sugerencia.html">Sugerencias</a>
+                  </li>
+                </ul>
+               
+                
+              
+          
+            
+            
           </div>
         </div>
       </nav>
@@ -57,7 +66,7 @@
 
 <div class="row float-md-end sticky-md-top d-none d-md-block " id="cardUsuario">
 <div class="card col-md-12 m-4 boxHome" id="usuario" >
-              <div class="row ">
+              <!-- <div class="row ">
                 <div class="container col-md-4">
                   <img src="../img/avatar/botella0.png" class="img-fluid rounded-start" alt="...">
                 </div>
@@ -66,18 +75,19 @@
                     <h5 class="card-title">Boracho67</h5>
                     <p class="card-text">Boracho67@gmail.com</p>
                     <p class="card-text">475681278</p>
-                    <a class="btn btn-dark mb-3" href="./configuracion.html" role="button">Ajustes</a>
+                    <a class="btn btn-dark mb-3" href="./administrar.html" role="button">Administrar</a>
+                    <a class="btn btn-dark mb-3" href="./configuracion.html" role="button">Configuracion</a>
                     <a class="btn btn-dark mb-3" onclick="logout()" href="#" role="button">Logout</a>
                    
                     </div>
                   </div>
-                </div>
+                </div> -->
                 </div>
 
                 
                 <div class="col-md-12 m-4" >
                  <div class="d-grid gap-2 col-6 mx-auto publicar-home">
-                  <button class="btn btn-outline-dark" type="button">Publicar</button>
+                  <button class="btn btn-outline-dark" type="button">Subi tu trago</button>
                   
                 </div>
                 </div>

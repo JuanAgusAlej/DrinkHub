@@ -5,7 +5,11 @@
 #busquedaTragos {
   margin-right: 75px;
 }
-
+.usuarioNavbar{
+    width: 20vw;
+    margin:5px 0px 5px 20px;
+    
+}
 .home-main{
     background: url(../img/home/fondo.jpg);
     
@@ -138,7 +142,7 @@
 .boton-style {
 	border: 1px solid #ffffff;
 	border-radius: 15px;
-	margin-left: 45px;
+	
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 200;
