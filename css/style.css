@@ -1,4 +1,5 @@
-* {
+/* ---------------------INDEX LOGUIN------------------------------- */
+.index {
     margin: 0;
     padding: 0;
     font-family: 'calibri';
@@ -12,10 +13,14 @@
     -o-background-size: cover;
     background-size: cover;
     display: flex; 
-    min-height: 100vh; 
+    min-height: 70vh; 
 }
 
+<<<<<<< HEAD
 .login-form {
+=======
+.form-body-index {
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
     margin: auto;
     width: 50%;
     max-width: 500px;
@@ -27,7 +32,11 @@
     
 }
 
+<<<<<<< HEAD
 .login-form button[type="submit"] {
+=======
+.button-form-index{
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
     text-decoration: none;
     width: 100%;
     background: rgba(0, 0, 0, 0.856);
@@ -37,13 +46,13 @@
     font-size: 20px;
 }
 
-h2 {
+.titulo-index {
     text-align: center;
     margin-bottom: 20px;
     color: black;
 }
 
-input {
+.input-index {
     display: block;
     padding: 10px;
     width: 100%;
@@ -51,7 +60,7 @@ input {
     font-size: 20px;
 }
 
-h5 {
+.registrate-index {
     text-align: center;
     margin-bottom: 20px;
     color: black;
@@ -62,6 +71,7 @@ h5 {
     color: black;
 }
 
+<<<<<<< HEAD
 .modal-body button [type="submit"] {
     width: 100%;
     background-color: black;
@@ -70,16 +80,22 @@ h5 {
     margin-bottom: 16px;
     font-size: 16px;
     text-decoration: none;
+=======
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
 
-}
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
     .login-form {
+=======
+    .form-body-index {
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
         width: 75%;
     }
 }
 
 @media (max-width:480px) {
+<<<<<<< HEAD
     .login-form {
         width: 95%;
     }
@@ -90,3 +106,67 @@ h5 {
     margin-bottom: 16px;
     font-size: 16px;  
 }
+=======
+    .form-body-index {
+        width: 95%;
+    }
+}
+/* ---------------------INDEX LOGUIN------------------------------- */
+
+.navbar{
+    background-color:black;
+
+ 
+}
+.navbarContainer{
+    padding:0px;
+}
+.containerImg{
+    
+    width:5rem;
+}
+.letraNavBar{
+    font-size: 1rem 
+    
+}
+
+/* -----------------------------------main------------------------------- */
+.fondoError404{
+    background-color:white;
+}
+.boxConf{
+    width: 80vw;
+    
+
+    
+    -webkit-box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5); 
+    box-shadow: 4px 1px 15px 4px rgba(0,0,0,0.5);
+
+}
+#inputTelefono{
+  
+  -webkit-appearance: textfield ; 
+
+
+}
+
+/*-------------------- FOOTER------------------------------------ */
+.row{
+    --bs-gutter-x: 0;
+}
+
+#footer a{
+    text-decoration: none;
+    color:white;
+    
+    
+}
+.copyImg{
+    width: 15rem;
+}
+
+#error404{
+    
+    width: 70%;
+}
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
