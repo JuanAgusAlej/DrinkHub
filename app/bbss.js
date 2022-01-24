@@ -1,6 +1,7 @@
+let generadorID = 0
 class Usuario{
     constructor(nombre, apellido, nacimientoFecha, nick, telefono, correo, pass,admin=false, avatar='default') {
-        this.id= new Date().getTime();
+        this.id= generadorID++;
         this.nombre = nombre
         this.apellido=apellido
         this.nacimientoFecha=nacimientoFecha
@@ -16,7 +17,7 @@ class Usuario{
 
 class Nosotros{
     constructor(nombre, apellido, skill, descripcion, foto) {
-        this.id = new Date().getTime()
+        this.id = generadorID++
         this.nombre = nombre
         this.apellido = apellido
         this.skill = skill
@@ -27,7 +28,7 @@ class Nosotros{
 
 class Receta{
     constructor(titulo, ingrediente, preparacion, imagen, autor) {
-        this.id = new Date().getTime()
+        this.id = generadorID++
         this.titulo = titulo
         this.ingrediente = ingrediente
         this.preparacion = preparacion
@@ -50,14 +51,16 @@ class EmpresaDatos{
 }
 
 class Productos{
-    constructor(nombre, cantidad, valor, stock=false) {
-        this.id = new Date().getTime()
+    constructor(nombre, cantidad, valor,imagen, stock=true) {
+        this.id = generadorID++
         this.valor = valor
         this.nombre = nombre
         this.cantidad = cantidad
         this.stock = stock;
+        this.imagen = imagen
     }
 }
+
 
 let usuarios = JSON.parse(localStorage.getItem("users")) || [];
 let nosotros = JSON.parse(localStorage.getItem("nosotros")) || [];
@@ -167,23 +170,23 @@ const agregarEmpresaDatos = function () {
 
 }
 const agregarProducto = function () {
-    productos.push(new Productos('Fernet', 5, 700.00))
-    productos.push(new Productos('Andes', 25, 200.00))
-    productos.push(new Productos('Gin', 30, 2478.00))
-    productos.push(new Productos('Vodka', 10, 836.00))
-    productos.push(new Productos('Ron blanco', 20, 1485.00))
-    productos.push(new Productos('Zumo de tomate', 20, 40.00))
-    productos.push(new Productos('Zumo de limón', 20, 40.00))
-    productos.push(new Productos('Salsa Tabasco', 40, 100.00))
-    productos.push(new Productos('Salsa Worcestershire', 150, 120.00))
-    productos.push(new Productos('Campari', 200, 724.00))
-    productos.push(new Productos('Vermú rojo', 100, 1400.00))
-    productos.push(new Productos('Ginebra', 3, 3000.00))
-    productos.push(new Productos('Soda', 400, 50.00))
-    productos.push(new Productos('Hielo', 5, 100.00))
-    productos.push(new Productos('Leche de coco', 20, 350.00))
-    productos.push(new Productos('Zumo de piña', 30, 400.00))
-    productos.push(new Productos('Vino Manzanilla', 30, 2400.00))
+    productos.push(new Productos('Fernet', 5, 700.00, 'fernet'))
+    productos.push(new Productos('Andes', 25, 200.00, 'andes'))
+    productos.push(new Productos('Gin', 30, 2478.00, 'gin'))
+    productos.push(new Productos('Vodka', 10, 836.00, 'vodka'))
+    productos.push(new Productos('Ron blanco', 20, 1485.00, 'ronBlanco'))
+    productos.push(new Productos('Zumo de tomate', 20, 40.00, 'zumoTomate'))
+    productos.push(new Productos('Zumo de limón', 20, 40.00, 'zumoLimon'))
+    productos.push(new Productos('Salsa Tabasco', 40, 100.00, 'salsaTabasco'))
+    productos.push(new Productos('Salsa Worcestershire', 150, 120.00, 'salsaWorcestershire'))
+    productos.push(new Productos('Campari', 200, 724.00, 'campari'))
+    productos.push(new Productos('Vermú rojo', 100, 1400.00, 'vermuRojo'))
+    productos.push(new Productos('Ginebra', 3, 3000.00, 'ginebra'))
+    productos.push(new Productos('Soda', 400, 50.00, 'soda'))
+    productos.push(new Productos('Hielo', 5, 100.00, 'hielo'))
+    productos.push(new Productos('Leche de coco', 20, 350.00, 'lecheCoco'))
+    productos.push(new Productos('Zumo de piña', 30, 400.00, 'zumonPiña'))
+    productos.push(new Productos('Vino Manzanilla', 30, 2400.00, 'vinoManzana'))
     localStorage.setItem("productos",JSON.stringify(productos))
 }
 
