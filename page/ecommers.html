@@ -95,16 +95,17 @@
             class="my-3 float-md-end d-sm-none d-md-block d-flex justify-content-center container"
             id="busquedaTragos"
           >
-            <form class="d-flex">
+            <div class="d-flex">
               <input
                 class="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
                 id=buscador
+                onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"
               />
               <a class="btn btn-outline-dark" onclick="busqueda(buscador.value)" onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"  >Buscar</a>
-            </form>
+            </div>
             <div id="filtroBusqueda" >
               <!-- <a class="btn boton-style bg-primary text-white rounded-pill my-3 " onclick="eliminarFiltro()" > <i class="far fa-times-circle"> fernet</i></a> -->
             </div>

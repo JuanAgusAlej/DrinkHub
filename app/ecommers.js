@@ -11,11 +11,11 @@ const mostrarProductos = function (productos) {
         if (product.stock) {
             
             cardsProductosHtml += `
-            <div class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4 ">
+            <div class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3  my-4 ">
                 <div class="card">
                   <img src="../img/producto/${product.imagen}.png" class="img-fluid rounded-start" alt="...">
                   <div class="card-body">
-                    <p class="card-title text-center">${product.nombre}</p>
+                    <p class="card-title text-center fs-5">${product.nombre}</p>
                     <div class="d-flex justify-content-around">
                        <p>$${product.valor}</p>
                        <a class="btn btn-primary" onclick=agregarCarrito(${product.id})><i class="fas fa-cart-plus"></i></a>
