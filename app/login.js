@@ -40,6 +40,15 @@ document.querySelector('#login-formulario').addEventListener('submit', function 
 
 
 /**  REGISTRA USUARIO EN LOCAL STORAGE CON DATOS DE MODAL REGISTRO */
+const verificacionLoguin = function () {
+
+  if (localStorage.getItem("usuario")) {
+      location.href='./home.html';
+  }
+
+}
+verificacionLoguin ()
+
 document.querySelector('#registro-formulario').addEventListener('submit', function(ev) {
   ev.preventDefault();
 
