@@ -157,6 +157,17 @@ body {
 	transition-duration: 1s !important;
 }
 
+@media (min-width: 991px) {
+	.img-card-nosotros {
+		height: 300px;
+	}
+}
+@media (max-width: 991px) {
+	.img-card-nosotros {
+		min-height: 320px;
+	}
+}
+
 /*-------------------- FOOTER------------------------------------ */
 #footer {
 	background-color: black;

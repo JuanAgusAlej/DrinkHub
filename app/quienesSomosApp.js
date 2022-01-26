@@ -28,24 +28,24 @@ let manager2 = new Manager(
 );
 let manager3 = new Manager(
 	"Miqueas",
-	"Gonzales",
+	"Acevedo",
 	["Html", "Css", "JavaScript"],
 	"Me gusta aprender cosas nuevas, progamando conocí un nuevo mundo. Con Drink Hub estoy haciendo realidad una idea que tenía hace años.",
-	"JuanAlejandro"
+	"MiqueasAcevedo"
 );
 let manager4 = new Manager(
 	"Eliezer",
-	"Gonzales",
+	"Perez",
 	["Html", "Css", "JavaScript"],
 	"Encontré en la programación web una forma de darle vida a mis proyectos y todos los días me perfecciono para darle nuestras páginas nuevos condimentos.",
-	"JuanAlejandro"
+	"Eliezer"
 );
 let manager5 = new Manager(
 	"Agustin",
 	"Soldati",
 	["Html", "Css", "JavaScript"],
 	"Escribe el código correcto y la magia aparece. Es increible todo lo que se puede hacer con la programación Web. Drink Hub es nuestra segunda creación propia y vamos por más.",
-	"JuanAlejandro"
+	"JuanAgustinSoldati"
 );
 
 const agregarManager = function (manager) {
@@ -70,13 +70,13 @@ const crearCardsNosotros = function () {
 		card_nosotros.classList = "col-12 col-md-4 col-lg-2 my-4 mx-2";
 		let estructura_nosotros = `
   <div class="card estilo-gris my-4 h-100 bg-light">
-    <img src="../img/${item.img}.jpeg" class="card-img-top" alt="..." />
+    <img src="../img/${item.img}.jpeg" class="card-img-top img-card-nosotros" alt="..." />
     <div class="card-body text-center">
       <h5 class="card-title">${item.nombre} ${item.apellido}</h5>
         <div class="container">
-          <span class="badge rounded-pill bg-secondary">${item.skill[1]}</span>
-          <span class="badge rounded-pill bg-primary">${item.skill[2]}</span>
-          <span class="badge rounded-pill bg-warning mb-2">${item.skill[3]}</span>
+          <span class="badge rounded-pill bg-secondary">${item.skill[0]}</span>
+          <span class="badge rounded-pill bg-primary">${item.skill[1]}</span>
+          <span class="badge rounded-pill bg-warning mb-2">${item.skill[2]}</span>
         </div>
         <p class="card-text text-center fw-light">
        ${item.descripcion}
