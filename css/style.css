@@ -47,7 +47,11 @@
     min-height: 70vh; 
 }
 
+<<<<<<< HEAD
+.login-form {
+=======
 .form-body-index {
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
     margin: auto;
     width: 50%;
     max-width: 500px;
@@ -59,14 +63,18 @@
     
 }
 
+<<<<<<< HEAD
+.login-form button[type="submit"] {
+=======
 .button-form-index{
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
     text-decoration: none;
     width: 100%;
-    background: #48A65D;
+    background: rgba(0, 0, 0, 0.856);
     border: none;
     padding: 12px;
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .titulo-index {
@@ -94,15 +102,42 @@
     color: black;
 }
 
+<<<<<<< HEAD
+.modal-body button [type="submit"] {
+    width: 100%;
+    background-color: black;
+    border: none;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-decoration: none;
+=======
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
 
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
+    .login-form {
+=======
     .form-body-index {
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
         width: 75%;
     }
 }
 
 @media (max-width:480px) {
+<<<<<<< HEAD
+    .login-form {
+        width: 95%;
+    }
+}
+
+.registro-form {
+    padding: 32px 30px;
+    margin-bottom: 16px;
+    font-size: 16px;  
+}
+=======
     .form-body-index {
         width: 95%;
     }
@@ -209,3 +244,4 @@ footer a {
     
     width: 70%;
 }
+>>>>>>> d26790b9a72f184960a94016d7b8b0a3181f31cc
