@@ -142,50 +142,52 @@ const agregarUsuario = function () {
   localStorage.setItem("users", JSON.stringify(usuarios));
 };
 
+
+
 const agregarNosotros = function () {
   nosotros.push(
     new Nosotros(
-      "Juan Agustin",
-      "Alejandro",
-      ["html", "JavaScript", "Css"],
-      "Desarrollador, programador y ScrulMaster",
-      "alejandro.png"
+        "Roberto",
+        "Ousset",
+        ["Html", "Css", "JavaScript"],
+        "Soy un apasionado de la tecnología y todo lo que se pueda crear  con las computadoras. Me gusta el buen diseño y ver todos los detalles que tiene cada programa.",
+        "RoberOusset"
     )
   );
   nosotros.push(
     new Nosotros(
-      "Roberto",
-      "Ousset",
-      ["html", "JavaScript", "Css"],
-      "Desarrollador y programador",
-      "ousset.png"
+        "Juan Agustin",
+        "Alejandro",
+        ["Html", "Css", "JavaScript"],
+        "Programar es mi vida, creo que nací para esto. Disfruto creando las funcionalidades de cada parte del software.",
+        "JuanAlejandro"
     )
   );
   nosotros.push(
     new Nosotros(
-      "Miqueas",
-      "Acevedo",
-      ["html", "JavaScript", "Css"],
-      "Desarrollador y programador",
-      "acevedo.png"
+        "Miqueas",
+        "Acevedo",
+        ["Html", "Css", "JavaScript"],
+        "Me gusta aprender cosas nuevas, progamando conocí un nuevo mundo. Con Drink Hub estoy haciendo realidad una idea que tenía hace años.",
+        "MiqueasAcevedo"
     )
   );
   nosotros.push(
     new Nosotros(
-      "Eliezer Emilio",
-      "Pérez Romero",
-      ["html", "JavaScript", "Css"],
-      "Desarrollador y programador",
-      "pérezRomero.png"
+        "Eliezer",
+        "Perez",
+        ["Html", "Css", "JavaScript"],
+        "Encontré en la programación web una forma de darle vida a mis proyectos y todos los días me perfecciono para darle nuestras páginas nuevos condimentos.",
+        "Eliezer"
     )
   );
   nosotros.push(
     new Nosotros(
-      "Agustin",
-      "Soldati",
-      ["html", "JavaScript", "Css"],
-      "Desarrollador y programador",
-      "soldati.png"
+        "Agustin",
+        "Soldati",
+        ["Html", "Css", "JavaScript"],
+        "Escribe el código correcto y la magia aparece. Es increible todo lo que se puede hacer con la programación Web. Drink Hub es nuestra segunda creación propia y vamos por más.",
+        "JuanAgustinSoldati"
     )
   );
 
