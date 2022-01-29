@@ -6,7 +6,7 @@ let contenedor_nosotros = document.querySelector("#card_nosotros");
 const crearCardsNosotros = function () {
 	nosotros.map(function (item) {
 		let card_nosotros = document.createElement("div");
-		card_nosotros.classList = "col-8 col-md-4 col-lg-2 my-4 mx-2";
+		card_nosotros.classList = "col-8 col-md-4 col-lg-3 my-4 mx-2";
 		let estructura_nosotros = `
   <div class="card estilo-gris my-4 h-100 bg-light">
     <img src="../img/nosotros/${item.foto}.jpeg" class="card-img-top img-card-nosotros" alt="..." />
