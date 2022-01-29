@@ -1,5 +1,5 @@
 class Usuario{
-    constructor(nombre, apellido, nacimientoFecha, nick, telefono, correo, pass,admin=false, avatar='default') {
+    constructor(nombre, apellido,  nick, telefono, correo, pass,admin=false, avatar='default') {
         this.id= new Date().getTime();
         this.nombre = nombre
         this.apellido=apellido

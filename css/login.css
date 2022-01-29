@@ -12,7 +12,7 @@
     -o-background-size: cover;
     background-size: cover;
     display: flex; 
-    min-height: 70vh; 
+    min-height: 75vh; 
 }
 
 .login-form {
