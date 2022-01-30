@@ -1,7 +1,7 @@
 console.log('===== LOGIN =====')
 
 class Usuario{
-  constructor(nombre, apellido,  nick, correo, pass,telefono=0000, admin=false, avatar='default') {
+  constructor(nombre, apellido,  nick, correo, pass,telefono=1234, admin=false, avatar='default', validado=false) {
       this.id= new Date().getTime();
       this.nombre = nombre
       this.apellido=apellido
@@ -10,10 +10,63 @@ class Usuario{
       this.correo=correo
       this.pass=pass
       this.avatar=avatar
-      this.admin=admin
+    this.admin = admin
+    this.validado=validado
   }
   
 }
+
+const confirmar = function (validador, id) {
+
+  let verificacion = document.getElementById("verificacion").value
+  console.log("entro")
+  console.log(verificacion === validador)
+
+  if (verificacion == validador) {
+    let usuarios = JSON.parse(localStorage.getItem("users"))
+    usuarios[id].validado = true
+    localStorage.setItem('users', JSON.stringify(usuarios))
+    localStorage.removeItem('validador')
+    location.href='./page/home.html'
+  }
+  
+}
+
+const enviarCorreo = function (validador) {
+  
+}
+
+const validarCorreo = function (id) {
+
+  let loginformulario = document.getElementById("mainLogin")
+  let usuarios = JSON.parse(localStorage.getItem("users"))
+  let validador = JSON.parse(localStorage.getItem("validador"))
+
+  let indexUsuario = usuarios.findIndex(function (user) {
+    return user.id === id
+  })
+  let validador = JSON.parse(localStorage.getItem("validador")) || false
+  if (!validador) {
+    validador = Math.floor(Math.random()*(99999-10000)+10000)
+    localStorage.setItem('validador', JSON.stringify(validador))
+  }
+
+  enviarCorreo(validador)
+
+  loginformulario.innerHTML = `
+  <div class="login-form" id="login-formulario">
+  <h4>Verificacion</h4>
+  <a class="btn btn-dark" >Enviar validador</a>
+  <p> Ingresar el codigo que se envio por correo </p>
+  <input required type="text" name="verificacion" id="verificacion">
+  <a class="btn btn-dark" onclick="confirmar(${validador}, ${indexUsuario})">Introducir</a>
+  </div>
+  `
+
+ // localStorage.setItem('validador', JSON.stringify(validador))
+
+}
+
 
 /** VALIDAR DATOS DEL FORMULARIO DEL LOGIN */
 const validarDatos = function () {
@@ -24,13 +77,20 @@ const validarDatos = function () {
   const usuarios = JSON.parse(localStorage.getItem('users')) || []
 
   const usuario = usuarios.find(function (localUsuario) {
-    return localUsuario.email === email;
+
+    return localUsuario.correo === email;
   })
 
   if ( usuario ) {
-    if  ( usuario.password === password) {
-      localStorage.setItem('user', JSON.stringify(usuario));
-      location.replace('/page/home.html');
+    if  ( usuario.pass === password) {
+      if (usuario.validado) {
+        
+        localStorage.setItem('user', JSON.stringify(usuario));
+        location.href='./page/home.html';
+
+      } else {
+        validarCorreo(usuario.id)
+      }
     } else {
       alert('contraseña o usuario incorrecta');
     }
@@ -70,16 +130,22 @@ document.querySelector('#registro-formulario').addEventListener('submit', functi
   const usuarios = JSON.parse(localStorage.getItem('users')) || []
 
   const usuarioExiste = usuarios.find(function (localUsuario) {
-    return localUsuario.email === email || localUsuario.nick === nick;
+    console.log(localUsuario.correo, email)
+    
+    return localUsuario.correo === email || localUsuario.nick === nick;
   })
+
+  console.log(usuarioExiste)
 
   if ( usuarioExiste ) {
    alert(`Correo o nick ya estan siendo utilizados`)
   } else { 
+    let btnRegistar = document.getElementById("btnRegistar")
     // actualizamos base de datos de usuarios en local
     usuarios.push(nuevoUsuario)
    // localStorage.setItem('users', JSON.stringify(usuarios));
     alert(`${nombre}, sus datos han sido guardado con exito`)
+    
     //limpiarFormularioRegistro()
     // cerrar el modal (opcional)
   }
@@ -89,3 +155,5 @@ document.querySelector('#registro-formulario').addEventListener('submit', functi
 function limpiarFormularioRegistro() {
   document.getElementById("myForm").reset();
 }
+
+

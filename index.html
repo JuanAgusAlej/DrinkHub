@@ -56,7 +56,8 @@
       </div>
     </nav>
   </header>
-  <main class="body-login">
+  <main class="body-login" id="mainLogin">
+    
     <form class="login-form" id="login-formulario">
       <h2>Bienvenidos a Drink Hub</h2>
       <input required type="email" placeholder="Email" name="email" id="login-email">
@@ -68,6 +69,7 @@
       <h5><a class="login-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-resgistro">
           ¿No tienes una cuenta? Registrate</a></h5>
   </form>
+
   </main>
   
   <footer id="footer">
@@ -94,7 +96,7 @@
     <!-- Modal -->
     <div class="modal fade" id="modal-resgistro" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content text-center">
+        <div class="modal-content text-center" id="loguinModal">
           
           <form class="registro-form" id="registro-formulario">
             <h4>Registro de Usuario</h4>
@@ -104,7 +106,7 @@
               <input required type="email" placeholder="Email" name="email" id="registro-email">
               <input required type="password" placeholder="Contraseña" name="password" id="registro-pass">
               <div class="d-grid gap-2">
-                <button class="btn btn-dark" type="submit">Registar</button>
+                <button class="btn btn-dark" type="submit" id="btnRegistar">Registar</button>
               </div>
               <br>
               <div class="d-grid gap-2">
@@ -120,6 +122,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="app/login.js"></script>
     <script src="https://kit.fontawesome.com/ebf846398f.js" crossorigin="anonymous"></script>
 </body>
 </html>
