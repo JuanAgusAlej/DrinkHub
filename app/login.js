@@ -32,31 +32,49 @@ const confirmar = function (validador, id) {
   
 }
 
-const enviarCorreo = function (validador) {
+const enviarCorreo = function (validador,id) {
+  let usuarios = JSON.parse(localStorage.getItem("users"))
+  var templateParams = {
+    usuario: usuarios[id].nick,
+    validador: validador,
+    correo:usuarios[id].correo
+
+};
+ 
+emailjs.send('service_v0xibil', 'template_xm7qgq6', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
+}
+
+const generarValidador = function (indexUsuario) {
   
+  let validador = Math.floor(Math.random() * (99999 - 10000) + 10000)
+  localStorage.setItem('validador', JSON.stringify(validador))
+  enviarCorreo(validador,indexUsuario)
+
 }
 
 const validarCorreo = function (id) {
 
   let loginformulario = document.getElementById("mainLogin")
   let usuarios = JSON.parse(localStorage.getItem("users"))
-  let validador = JSON.parse(localStorage.getItem("validador"))
 
   let indexUsuario = usuarios.findIndex(function (user) {
     return user.id === id
   })
-  let validador = JSON.parse(localStorage.getItem("validador")) || false
-  if (!validador) {
-    validador = Math.floor(Math.random()*(99999-10000)+10000)
-    localStorage.setItem('validador', JSON.stringify(validador))
-  }
+  generarValidador(indexUsuario)
+  let validador = JSON.parse(localStorage.getItem("validador"))
 
-  enviarCorreo(validador)
+
 
   loginformulario.innerHTML = `
   <div class="login-form" id="login-formulario">
   <h4>Verificacion</h4>
-  <a class="btn btn-dark" >Enviar validador</a>
+  <a class="btn btn-dark" onclick="generarValidador(${indexUsuario})" >Enviar validador</a>
   <p> Ingresar el codigo que se envio por correo </p>
   <input required type="text" name="verificacion" id="verificacion">
   <a class="btn btn-dark" onclick="confirmar(${validador}, ${indexUsuario})">Introducir</a>
@@ -143,7 +161,7 @@ document.querySelector('#registro-formulario').addEventListener('submit', functi
     let btnRegistar = document.getElementById("btnRegistar")
     // actualizamos base de datos de usuarios en local
     usuarios.push(nuevoUsuario)
-   // localStorage.setItem('users', JSON.stringify(usuarios));
+    localStorage.setItem('users', JSON.stringify(usuarios));
     alert(`${nombre}, sus datos han sido guardado con exito`)
     
     //limpiarFormularioRegistro()
