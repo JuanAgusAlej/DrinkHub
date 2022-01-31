@@ -1,7 +1,7 @@
 console.log('===== LOGIN =====')
 
 class Usuario{
-  constructor(nombre, apellido,  nick, correo, pass,telefono=1234, admin=false, avatar='default', validado=false) {
+  constructor(nombre, apellido,  nick, correo, pass,telefono=1234, admin=false, avatar='default') {
       this.id= new Date().getTime();
       this.nombre = nombre
       this.apellido=apellido
@@ -11,16 +11,23 @@ class Usuario{
       this.pass=pass
       this.avatar=avatar
     this.admin = admin
-    this.validado=validado
+    
   }
   
 }
+const verificacionLoguin = function () {
 
+  if (localStorage.getItem("user")) {
+      location.href='./page/home.html';
+  }
+
+}
+verificacionLoguin ()
 const confirmar = function (validador, id) {
 
   let verificacion = document.getElementById("verificacion").value
-  console.log("entro")
-  console.log(verificacion === validador)
+  //console.log("entro")
+  //console.log(verificacion === validador)
 
   if (verificacion == validador) {
     let usuarios = JSON.parse(localStorage.getItem("users"))
@@ -28,6 +35,8 @@ const confirmar = function (validador, id) {
     localStorage.setItem('users', JSON.stringify(usuarios))
     localStorage.removeItem('validador')
     location.href='./page/home.html'
+  } else {
+    window.alert("El codigo validador es falso")
   }
   
 }
@@ -39,9 +48,9 @@ const enviarCorreo = function (validador,id) {
     validador: validador,
     correo:usuarios[id].correo
 
-};
+  };
  
-emailjs.send('service_v0xibil', 'template_xm7qgq6', templateParams)
+  emailjs.send('service_v0xibil', 'template_xm7qgq6', templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
@@ -73,12 +82,14 @@ const validarCorreo = function (id) {
 
   loginformulario.innerHTML = `
   <div class="login-form" id="login-formulario">
-  <h4>Verificacion</h4>
-  <a class="btn btn-dark" onclick="generarValidador(${indexUsuario})" >Enviar validador</a>
-  <p> Ingresar el codigo que se envio por correo </p>
-  <input required type="text" name="verificacion" id="verificacion">
-  <a class="btn btn-dark" onclick="confirmar(${validador}, ${indexUsuario})">Introducir</a>
-  </div>
+      <h2>Verificacion</h2>
+      <h4> Ingresar el codigo que se envio por correo </h4>
+      <input type="text" name="verificacion" id="verificacion">
+      <div class="row">
+        <a class="btn btn-dark mb-2" onclick="generarValidador(${indexUsuario})" >Enviar validador</a>
+        <a class="btn btn-dark" onclick="confirmar(${validador}, ${indexUsuario})" >Introducir</a>
+       </div>
+    </div>
   `
 
  // localStorage.setItem('validador', JSON.stringify(validador))
@@ -124,14 +135,7 @@ document.querySelector('#login-formulario').addEventListener('submit', function 
 
 
 /**  REGISTRA USUARIO EN LOCAL STORAGE CON DATOS DE MODAL REGISTRO */
-const verificacionLoguin = function () {
 
-  if (localStorage.getItem("user")) {
-      location.href='./home.html';
-  }
-
-}
-verificacionLoguin ()
 
 document.querySelector('#registro-formulario').addEventListener('submit', function(ev) {
   ev.preventDefault();
