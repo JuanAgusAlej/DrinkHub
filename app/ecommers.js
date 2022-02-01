@@ -31,7 +31,7 @@ const mostrarProductos = function (productos) {
 
 }
 
-
+//------------ENVIAR TICKET---------------------------
 const enviarComprobante = function (carrito) {
     let ticketCompra = `<table class="table">
     <tbody id="tbProducto">
@@ -67,10 +67,10 @@ const enviarComprobante = function (carrito) {
     let user = JSON.parse(localStorage.getItem("user"))
     
     var templateParams = {
-        //correo: user.correo,
+        correo: user.correo,
         //correo: 'drinkhubcode@gmail.com',
         compra: ticketCompra
-       // compra :"asdasd"
+       
     };
      
     emailjs.send('service_v0xibil', 'template_z8dsyju', templateParams)
@@ -279,7 +279,7 @@ const busqueda = function (buscar) {
     }
 }
 
-
+//----------------ELIMINA FILTRO---------------------
 const eliminarFiltro = function () {
     let productos = JSON.parse(localStorage.getItem("productos")) || []
     let filtroBusqueda = document.getElementById("filtroBusqueda")
@@ -287,3 +287,49 @@ const eliminarFiltro = function () {
     mostrarProductos(productos)
     
 }
+
+const cargarNavbar = function () {
+    let navbarSupportedContent = document.getElementById('navbarSupportedContent')
+  
+    navbarSupportedContent.innerHTML = `
+    <div class="d-flex justify-content-between ">
+        <div class="col-6">
+           <ul class="navbar-nav letraNavBar2">
+                <li class="nav-item align-text-center">
+                    <a class="btn btn-outline-light boton-style" aria-current="page" href="./ecommers.html"
+                    ><i class="fas fa-store-alt"></i></a>
+                </li>
+                <li class="nav-item m-0">
+                    <a class="btn btn-outline-light boton-style" href="./quienesSomos.html"
+                    >Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                      <a class="btn btn-outline-light boton-style" href="./sugerencia.html">Sugerencias</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-3 ">
+            <div class="card col-md-12 boxHome" id="usuario">
+                
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Carrito de compra</h5>
+                            <div id="precioTodal">
+                                <p class="card-text">$0</p>
+                            </div>
+                            <a class="btn btn-dark my-3" onclick="btnComprar()" role="button">Comprar</a>
+                            <a class="btn btn-dark my-3" onclick="productoCarrito()" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                            >Productos</a>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <form class="d-flex mt-3" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Buscar</button>
+    </form>`
+    
+  }
+  
