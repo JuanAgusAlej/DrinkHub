@@ -13,7 +13,7 @@ const mostrarProductos = function (productos) {
             cardsProductosHtml += `
             <div class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3  my-4 ">
                 <div class="card">
-                  <img src="../img/producto/${product.imagen}.png" class="img-fluid rounded-start" alt="...">
+                  <img src="${product.imagen}" class="img-fluid rounded-start" alt="...">
                   <div class="card-body">
                     <p class="card-title text-center fs-5">${product.nombre}</p>
                     <div class="d-flex justify-content-around">
@@ -31,16 +31,71 @@ const mostrarProductos = function (productos) {
 
 }
 
+
+const enviarComprobante = function (carrito) {
+    let ticketCompra = `<table class="table">
+    <tbody id="tbProducto">
+      <tr>
+        <th scope="col">cantidad</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Valor</th>
+      </tr>
+       
+    `
+    let valor = 0;
+    carrito.forEach(function (product) {
+        
+        ticketCompra += `
+    <tr>
+      <td scope="row">${product.cantidad}</td>
+      <td>${product.nombre}</td>
+      <td>$${product.valor * product.cantidad}</td>
+     </br>
+    </tr>`
+        valor += product.valor * product.cantidad
+    })
+    ticketCompra +=`
+    
+    <hr>
+        <tr>
+      <th scope="row">Valor Total: </th>
+      <td>$${valor}</td>
+     </tr>
+    </tbody>
+        </table>`
+    
+    let user = JSON.parse(localStorage.getItem("user"))
+    
+    var templateParams = {
+        //correo: user.correo,
+        //correo: 'drinkhubcode@gmail.com',
+        compra: ticketCompra
+       // compra :"asdasd"
+    };
+     
+    emailjs.send('service_v0xibil', 'template_z8dsyju', templateParams)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+           console.log('FAILED...', error);
+        });
+    
+   
+}
+
+
 // -----------------EVALUA VALOR DE LA COMPRA-----------
 const calcularTotal = function (carrito) {
     let precioTodal = document.getElementById("precioTodal")
     let total = 0
 
     precioTodal.innerHTML = ""
-    
-    carrito.forEach(function (product) {
-        total += product.valor * product.cantidad
-    })
+    if (carrito) {
+        
+        carrito.forEach(function (product) {
+            total += product.valor * product.cantidad
+        })
+    }
 
     precioTodal.innerHTML=`<p class="card-text">$${total}</p>` 
 }
@@ -125,6 +180,7 @@ const agregarCarrito = function (id) {
 const btnComprar = function () {
     
     //mensaje
+    window.alert("Gracias Por su compra se enviara un correo con indicaciones")
     let productos = JSON.parse(localStorage.getItem("productos")) || [] 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || []
     
@@ -147,11 +203,11 @@ const btnComprar = function () {
         
 
     })
-
+    enviarComprobante(carrito)
     localStorage.setItem("productos", JSON.stringify(productos))
     localStorage.removeItem("carrito")
     calcularTotal()
-    mostrarProductos()
+    mostrarProductos(productos)
 
 }
 

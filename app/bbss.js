@@ -4,7 +4,6 @@ class Usuario {
     nombre,
     apellido,
     nick,
-    telefono,
     correo,
     pass,
     admin = false,
@@ -14,7 +13,6 @@ class Usuario {
     this.nombre = nombre;
     this.apellido = apellido;
     this.nick = nick;
-    this.telefono = telefono;
     this.correo = correo;
     this.pass = pass;
     this.avatar = avatar;
