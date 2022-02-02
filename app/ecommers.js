@@ -33,6 +33,7 @@ const mostrarProductos = function (productos) {
 
 //------------ENVIAR TICKET---------------------------
 const enviarComprobante = function (carrito) {
+
     let ticketCompra = `<table class="table">
     <tbody id="tbProducto">
       <tr>
@@ -64,11 +65,11 @@ const enviarComprobante = function (carrito) {
     </tbody>
         </table>`
     
-    let user = JSON.parse(localStorage.getItem("user"))
+    //let user = JSON.parse(localStorage.getItem("user"))
     
     var templateParams = {
         correo: user.correo,
-        //correo: 'drinkhubcode@gmail.com',
+       // correo: 'drinkhubcode@gmail.com',
         compra: ticketCompra
        
     };
@@ -180,7 +181,7 @@ const agregarCarrito = function (id) {
 const btnComprar = function () {
     
     //mensaje
-    window.alert("Gracias Por su compra se enviara un correo con indicaciones")
+   // window.alert("Gracias Por su compra se enviara un correo con indicaciones")
     let productos = JSON.parse(localStorage.getItem("productos")) || [] 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || []
     
