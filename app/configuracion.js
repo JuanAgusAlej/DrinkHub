@@ -1,18 +1,3 @@
-class Usuario{
-    constructor(nombre, apellido, nacimientoFecha, nick, telefono, correo, pass,admin=false, avatar='default') {
-        this.id= new Date().getTime();
-        this.nombre = nombre
-        this.apellido=apellido
-        this.nacimientoFecha=nacimientoFecha
-        this.nick=nick
-        this.telefono=telefono
-        this.correo=correo
-        this.pass=pass
-        this.avatar=avatar
-        this.admin=admin
-    }
-    
-}
 
 const agregarUsuario = function () {
     
@@ -38,7 +23,6 @@ let usuario = JSON.parse(localStorage.getItem("user")) || [];
 
 let inputNombre = document.getElementById("inputNombre");
 let inputApellido = document.getElementById("inputApellido");
-let inputNacimiento = document.getElementById("inputNacimiento");
 let inputNick = document.getElementById("inputNick");
 let inputTelefono = document.getElementById("inputTelefono");
 let inputCorreo = document.getElementById("inputCorreo");
@@ -48,14 +32,16 @@ let avatar = document.getElementById("avatar");
 //avatar.value = usuario.imagen
 inputNombre.value = usuario.nombre
 inputApellido.value = usuario.apellido
-inputNacimiento.value = usuario.fecha
 inputNick.value = usuario.nick
 inputTelefono.value = usuario.telefono
 inputCorreo.value = usuario.correo
 
-console.log(usuario)
-console.log(usuario.imagen)
+//console.log(usuario)
+//console.log(usuario.imagen)
 let modificarPass = false
+
+// -------------VALIDA LOGIN------------------
+
 const verificacionLoguin = function () {
 
     if (!localStorage.getItem("user")) {
@@ -63,14 +49,18 @@ const verificacionLoguin = function () {
     }
 
 }
+
 verificacionLoguin()
+
+
+// -------------MUESTRA AVATAR------------------
+
+
 const mostrarAvatar = function () {
     let inputAvatar = document.getElementById("inputAvatar") 
     let option = ""
     
-    // let chooseAvatar = document.getElementById("chooseAvatar")
-    // chooseAvatar.value = usuario.imagen
-    // console.log(chooseAvatar.value)
+   
     for (let i = 0; i < 13; i++) {
         let imagen = "botella"+i
         if (imagen===usuario.imagen) {
@@ -83,7 +73,7 @@ const mostrarAvatar = function () {
         }
         
     }
-    // console.log(option)
+    
     avatar.innerHTML=`<img src="../img/avatar/${usuario.imagen}.png" class="img-thumbnail" alt="Avatar">`
     inputAvatar.innerHTML=option
     
@@ -91,11 +81,15 @@ const mostrarAvatar = function () {
 
 mostrarAvatar()
 
+// -------------CAMBIA AVATAR------------------
+
 const cambiarAvatar = function () {
     usuario.imagen = document.getElementById("inputAvatar").value
 
     avatar.innerHTML=`<img src="../img/avatar/${usuario.imagen}.png" class="img-thumbnail" alt="Avatar">`
 }
+
+// -------------CAMBIA CONTASEÑA------------------
 
 const cambiarPassword = function () {
     let cambiarPass = document.getElementById("cambiarPass")
@@ -104,6 +98,8 @@ const cambiarPassword = function () {
     cambiarPassVieja.className = 'col-6 col-md-10'
     modificarPass = true
 }
+
+// --------------VALIDA CONTASEÑA-----------------
 
 const validarPass = function () {
     let passNueva = document.getElementById("passNueva").value
@@ -119,6 +115,8 @@ const validarPass = function () {
         validarNick(document.getElementById("inputNick").value)
     }
 }
+
+// ----------------------VALIDA NICK----------------------
 
 const validarNick = function (nick) {
     let iNick = usuarios.findIndex(function (item) {
@@ -137,22 +135,27 @@ const validarNick = function (nick) {
         alert("Nick Utilizado")
     }
 }
+
+// ----------------VALIDA CORREO-----------
+
 const validarCorreo = function (correo) {
     let iCorreo = usuarios.findIndex(function (item) {
         return item.correo === correo
     })
-    // console.log("sdgasgd")
-    // console.log(iCorreo)
+    
     if (iCorreo === -1) {
        validarTelefono(document.getElementById("inputTelefono").value)
-       // console.log("1")
+       
     } else if (document.getElementById("inputCorreo").value === usuario.correo ) {
         validarTelefono(document.getElementById("inputTelefono").value)
-       // console.log("2")
+       
     }else{
         alert("Correo registrado")
     }
 }
+
+// -------------VALIDA EL TELEFONO------------------
+
 const validarTelefono = function (telefono) {
     
     let iTelefono = usuarios.findIndex(function (item) {
@@ -162,16 +165,17 @@ const validarTelefono = function (telefono) {
     console.log(iTelefono)
     if (iTelefono === -1) {
         cambiarDatos()
-        //console.log("1")
+        
     } else if (document.getElementById("inputTelefono").value === usuario.telefono) {
         cambiarDatos()
-        //console.log("2")
+        
     }else {
         alert("Telefono registrado")
     }
 
 }
 
+// -------------ACTUALIZA LA BBSS-----------
 
 const actualizarBbdd = function () {
     
@@ -185,10 +189,11 @@ const actualizarBbdd = function () {
     usuarios[iUsuario].imagen = document.getElementById("inputAvatar").value
 }
 
+// -----------GUARDA LOS CAMBIOS-----------
 
 const cambiarDatos = function () {
         
-   // console.log(iUsuario)
+  
 
 
     usuario.nick = document.getElementById("inputNick").value
@@ -200,6 +205,7 @@ const cambiarDatos = function () {
     location.href = './configuracion.html'
 }
 
+// ----------SE ELIMINA LA CUENTA--------------
 const eliminarCuenta = function () {
     let iUsuario = usuarios.findIndex(function (item) {
         return item.correo === usuario.correo

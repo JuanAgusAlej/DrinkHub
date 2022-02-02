@@ -184,31 +184,39 @@ const btnComprar = function () {
    // window.alert("Gracias Por su compra se enviara un correo con indicaciones")
     let productos = JSON.parse(localStorage.getItem("productos")) || [] 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || []
-    
-    productos.forEach(function (product) {
-        
-        carrito.forEach(function (i) {
-            
-            //console.log(i, product)
-            if (i.id === product.id) {
-                //console.log("carrito" + i.cantidad)
-                //console.log("productos"+product.cantidad)
-                product.cantidad = product.cantidad - i.cantidad       
-               // console.log(product.cantidad)
-                if (product.cantidad === 0) {
-                    product.stock = false
-                }
-            }
-            
-        })
-        
+    let user = JSON.parse(localStorage.getItem("user")) || null
 
-    })
-    enviarComprobante(carrito)
-    localStorage.setItem("productos", JSON.stringify(productos))
-    localStorage.removeItem("carrito")
-    calcularTotal()
-    mostrarProductos(productos)
+    if (user) {
+        
+        productos.forEach(function (product) {
+            
+            carrito.forEach(function (i) {
+                
+                //console.log(i, product)
+                if (i.id === product.id) {
+                    //console.log("carrito" + i.cantidad)
+                    //console.log("productos"+product.cantidad)
+                    product.cantidad = product.cantidad - i.cantidad       
+                   // console.log(product.cantidad)
+                    if (product.cantidad === 0) {
+                        product.stock = false
+                    }
+                }
+                
+            })
+            
+    
+        })
+        enviarComprobante(carrito)
+        localStorage.setItem("productos", JSON.stringify(productos))
+        localStorage.removeItem("carrito")
+        calcularTotal()
+        mostrarProductos(productos)
+    } else {
+        let ecommer = true
+        localStorage.setItem('ecommer', ecommer)
+        location.href='../index.html'
+    }
 
 }
 
@@ -263,20 +271,28 @@ const productoCarrito = function () {
 const busqueda = function (buscar) {
     let productos = JSON.parse(localStorage.getItem("productos")) || []
     let filtroBusqueda = document.getElementById("filtroBusqueda")
+    let buscador = document.getElementById("buscador")
     let encontrados = productos.filter(function (product) {
-        return product.nombre.toLowerCase().trim() === buscar.toLowerCase().trim()
+        if (!product.nombre.toLowerCase().trim().search(buscar.toLowerCase().trim())) {
+            //consultar porque cuando pongo que la condicion es verdadero devuelve todos los otros productos
+            return product
+        }
     })
     
 
     console.log(encontrados)
-    if (encontrados.length >0 ) {
+    if (buscar) {
         
-        filtroBusqueda.innerHTML = `
-        <a class="btn boton-style bg-primary text-white rounded-pill my-3"  onclick="eliminarFiltro()" > <i class="far fa-times-circle"> fernet</i></a>
-        `
-        mostrarProductos(encontrados)
-    } else {
-        window.alert("No se encontro producto")
+        if (encontrados.length >0 ) {
+            
+            filtroBusqueda.innerHTML = `
+            <a class="btn boton-style bg-primary text-white rounded-pill my-3"  onclick="eliminarFiltro()" > <i class="far fa-times-circle">${buscar}</i></a>
+            `
+            buscador.value=""
+            mostrarProductos(encontrados)
+        } else {
+            window.alert("No se encontro producto")
+        }
     }
 }
 
@@ -327,10 +343,18 @@ const cargarNavbar = function () {
             </div>
         </div>
     </div>
-    <form class="d-flex mt-3" >
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Buscar</button>
-    </form>`
+    <div class="d-flex my-3">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id=buscador
+                onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"
+              />
+            </div>
+            <div id="filtroBusqueda" >
+            </div>`
     
   }
   
