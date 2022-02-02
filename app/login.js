@@ -23,11 +23,12 @@ const verificacionLoguin = function () {
 
 }
 verificacionLoguin ()
-const confirmar = function (validador, id) {
+const confirmar = function (id) {
 
   let verificacion = document.getElementById("verificacion").value
   //console.log("entro")
-  //console.log(verificacion === validador)
+  let validador = JSON.parse(localStorage.getItem("validador"))
+  console.log(verificacion === validador)
 
   if (verificacion == validador) {
     let usuarios = JSON.parse(localStorage.getItem("users"))
@@ -87,7 +88,7 @@ const validarCorreo = function (id) {
       <input type="text" name="verificacion" id="verificacion">
       <div class="row">
         <a class="btn btn-dark mb-2" onclick="generarValidador(${indexUsuario})" >Enviar validador</a>
-        <a class="btn btn-dark" onclick="confirmar(${validador}, ${indexUsuario})" >Introducir</a>
+        <a class="btn btn-dark" onclick="confirmar(${indexUsuario})" >Introducir</a>
        </div>
     </div>
   `
@@ -109,7 +110,7 @@ const validarDatos = function () {
 
     return localUsuario.correo === email;
   })
-
+  console.log(email, usuarios)
   if ( usuario ) {
     if  ( usuario.pass === password) {
       if (usuario.validado) {

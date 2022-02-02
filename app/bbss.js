@@ -1,9 +1,8 @@
 class Usuario{
-    constructor(nombre, apellido,  nick, telefono, correo, pass,admin=false, avatar='default') {
+    constructor(nombre, apellido,  nick,  correo, pass,admin=false, telefono=1111, avatar='default') {
         this.id= new Date().getTime();
         this.nombre = nombre
         this.apellido=apellido
-        this.nacimientoFecha=nacimientoFecha
         this.nick=nick
         this.telefono=telefono
         this.correo=correo
@@ -71,9 +70,7 @@ const agregarUsuario = function () {
       new Usuario(
           "Lara",
           "Sp",
-          "1945-2-29",
           "LaMasBorracha",
-          "154621",
           "LS45@gmail.com",
           "14789"
       )
@@ -82,9 +79,7 @@ const agregarUsuario = function () {
         new Usuario(
             "Pedro",
             "Lopez",
-            "1976-11-28",
             "PL28",
-            "54631",
             "pl28@gmail.com",
             "14789"
         )
@@ -93,9 +88,7 @@ const agregarUsuario = function () {
         new Usuario(
             "Alberto",
             "Perez",
-            "1954-03-30",
             "Alberto_54",
-            "54831",
             "Alberto_54@gmail.com",
             "14789"
         )
@@ -104,9 +97,7 @@ const agregarUsuario = function () {
         new Usuario(
             "Santiago",
             "Tibulo",
-            "1994-05-23",
             "Borracho100",
-            "945284",
             "st94@gmail.com",
             "14789",
             true
@@ -117,9 +108,7 @@ const agregarUsuario = function () {
         new Usuario(
             "Emiliano",
             "D'uva",
-            "1993-09-23",
             "BeerMaster",
-            "945284",
             "BeerMaster@gmail.com",
             "14789",
             true
@@ -129,9 +118,7 @@ const agregarUsuario = function () {
         new Usuario(
             "Agutin",
             "Pahile",
-            "1993-12-29",
             "ElBorracho",
-            "945284",
             "ElBorracho@gmail.com",
             "14789",
             true
@@ -146,7 +133,7 @@ const agregarNosotros = function () {
     nosotros.push(new Nosotros('Juan Agustin','Alejandro',['html','JavaScript', 'Css'],'Desarrollador, programador y ScrulMaster','alejandro.png'))
     nosotros.push(new Nosotros('Roberto','Ousset',['html','JavaScript', 'Css'],'Desarrollador y programador','ousset.png'))
     nosotros.push(new Nosotros('Miqueas','Acevedo',['html','JavaScript', 'Css'],'Desarrollador y programador','acevedo.png'))
-    nosotros.push(new Nosotros('Eliezer Emilio','Pérez Romero',['html','JavaScript', 'Css'],'Desarrollador y programador','pérezRomero.png'))
+    nosotros.push(new Nosotros('Eliezer Emilio','Pérez Romero',['html','JavaScript', 'Css'],'Desarrollador y programador','Eliezer.jpeg'))
     nosotros.push(new Nosotros('Agustin', 'Soldati', ['html', 'JavaScript', 'Css'], 'Desarrollador y programador', 'soldati.png'))
     
     localStorage.setItem("nosotros",JSON.stringify(nosotros))
