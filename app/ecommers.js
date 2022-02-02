@@ -65,11 +65,11 @@ const enviarComprobante = function (carrito) {
     </tbody>
         </table>`
     
-    //let user = JSON.parse(localStorage.getItem("user"))
+    let user = JSON.parse(localStorage.getItem("user"))
     
     var templateParams = {
         correo: user.correo,
-       // correo: 'drinkhubcode@gmail.com',
+        //correo: 'drinkhubcode@gmail.com',
         compra: ticketCompra
        
     };

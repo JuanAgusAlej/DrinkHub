@@ -32,10 +32,19 @@ const confirmar = function (id) {
 
   if (verificacion == validador) {
     let usuarios = JSON.parse(localStorage.getItem("users"))
+    let ecommer = JSON.parse(localStorage.getItem("ecommer"))
     usuarios[id].validado = true
     localStorage.setItem('users', JSON.stringify(usuarios))
     localStorage.removeItem('validador')
-    location.href='./page/home.html'
+    localStorage.setItem('user', JSON.stringify(usuarios[id]));
+
+    if (!ecommer) {
+      
+      location.href='./page/home.html'
+    } else {
+      localStorage.removeItem('ecommer')
+      location.href='./page/ecommers.html'
+    }
   } else {
     window.alert("El codigo validador es falso")
   }
@@ -114,9 +123,14 @@ const validarDatos = function () {
   if ( usuario ) {
     if  ( usuario.pass === password) {
       if (usuario.validado) {
-        
         localStorage.setItem('user', JSON.stringify(usuario));
-        location.href='./page/home.html';
+        if (!ecommer) {
+      
+          location.href='./page/home.html'
+        } else {
+          localStorage.removeItem('ecommer')
+          location.href='./page/ecommers.html'
+        }
 
       } else {
         validarCorreo(usuario.id)

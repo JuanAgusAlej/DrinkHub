@@ -7,6 +7,7 @@ class Usuario {
     correo,
     pass,
     admin = false,
+    telefono = 1111,
     avatar = "default"
   ) {
     this.id = generadorID++;
@@ -15,8 +16,9 @@ class Usuario {
     this.nick = nick;
     this.correo = correo;
     this.pass = pass;
-    this.avatar = avatar;
     this.admin = admin;
+    this.telefono = telefono;
+    this.avatar = avatar;
   }
 }
 
