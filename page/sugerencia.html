@@ -1,0 +1,83 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../css/sugerenciaYcontacto.css" />
+  <title>Sugerencia</title>
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+<body>
+  
+  <main id=main-sugerencia>
+    <section id="seccion-sugerencia" class="tm-bg-color-5 tm-mb-3">
+      <div class="container-fluid">
+        <div class=row>
+          <div id="seccion-imagen-sugerencia" class= "d-none d-lg-block col-lg-4">
+            <img
+            src="../img/imagensugerencias.jpg"
+            class="img-fluid"
+            id="imagen-sugerencia"
+            alt="imagen-sugerencia"
+            />
+         </div>
+
+         <div id="fomulario-sugerencias" class="col-md-12 col-lg-4">
+          <h3 id=titulo>Dejanos tus datos</h3>
+          <div class="col" >
+            <input type="text" class="form-control" id="nombre"placeholder="Nombre" aria-label="Nombre">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido" id="apellido" aria-label="Apellido">
+          </div>
+
+         <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Dirección de Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" placeholder="nombre@mail.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label" >Sugerencia</label>
+          <input type="textarea" class="form-control" id="sugerencia" placeholder="Queremos que nos ayudes a mejorar">
+                   </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Acepto los Términos y Condiciones
+              </label>
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" id=boton-enviar type="button" onclick="getdata()">Enviar</button>
+                      </div>
+        </div>
+          <div id="texto-sugerencia" class="col-md-12 col-lg-4"> 
+          <h3 id=titulo>Queremos escucharte</h3>
+          <p id="parrafo-sugerencias"> Dejanos tus sugerencia para que sigamos mejorando Drink Hub</p>
+          <p id="parrafo-sugerencias"> Seguinos en nuestras redes sociales</p>
+          <div id="logos" class="container-fluid" >
+            <i id="logo-RRSS" class="fab fa-instagram fa-4x col-4 "></i>
+            <i id="logo-RRSS" class="fab fa-facebook fa-4x col-4 "></i>
+          </div>
+        </div>
+      
+        </div>
+      </div>
+      </div>
+  </div>
+     </main>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script type="text/javascript" src="../sugerencia.js">
+
+  </script>
+</body>
+</html>
