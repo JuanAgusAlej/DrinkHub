@@ -124,10 +124,12 @@ const validarDatos = function () {
     if  ( usuario.pass === password) {
       if (usuario.validado) {
         localStorage.setItem('user', JSON.stringify(usuario));
+        let ecommer = JSON.parse(localStorage.getItem('ecommer'))
         if (!ecommer) {
-      
+          console.log("entre")
           location.href='./page/home.html'
         } else {
+          console.log("eco")
           localStorage.removeItem('ecommer')
           location.href='./page/ecommers.html'
         }

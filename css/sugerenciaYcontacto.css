@@ -5,17 +5,18 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
-#logo-RRSS {
+.logo-RRSS {
     color: grey;
-    align-content: center
-   }
+}
 #parrafo-sugerencias {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     font-size: 1.2rem;
 }
 #main-sugerencia{
-   padding: 3%;
     background-color: rgb(59, 59,56);
+}
+#seccion-sugerencia{
+    height:72vh;
 }
 
 #imagen-sugerencia{
@@ -30,11 +31,11 @@
     color:whitesmoke;
     font-style: bold;
 }
-#titulo{
+.titulo{
     color: whitesmoke;
     text-align: center;
 }
-#parrafo-sugerencias{
+.parrafo-sugerencias{
     color:whitesmoke;
     text-align: center;
 
@@ -60,3 +61,4 @@
 .boton-enviar{
     align-items: right;
 }
+

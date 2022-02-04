@@ -1,10 +1,8 @@
 
-let sugerencia = JSON.parse(localStorage.getItem("sugerencia")) || [];
 
 class Sugerencia{
     constructor(nombre, apellido, email, sugerencia){
-        this.nombre = nombre
-        this.apellido = apellido
+        this.nombre = nombre + ' ' + apellido
         this.email = email
         this.sugerencia = sugerencia
     }
@@ -31,25 +29,28 @@ class Sugerencia{
       })
   })()
    
-function getdata(){
-    let informacion = new Sugerencia(
+function getdata() {
+   let sugerencias = JSON.parse(localStorage.getItem("sugerencias")) || [];
+  
+    let sugerencia = new Sugerencia(
         document.getElementById("nombre").value, 
     document.getElementById("apellido").value,
     document.getElementById("email").value,
     document.getElementById("sugerencia").value)
-   /* sugerencia.nombre = document.getElementById("nombre").value;
-    sugerencia.apellido = document.getElementById("apellido").value;
-    sugerencia.email = c;
-    sugerencia.sugerencia = document.getElementById("sugerencia").value;
-    console.log(nombre+" "+apellido+" "+email+" "+sugerencia) */
+   
     alert(`Gracias por tu aporte ${document.getElementById("nombre").value}`)
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
     document.getElementById("email").value = "";
     document.getElementById("sugerencia").value = "";
-    document.getElementById("nombre").focus()
-    sugerencia.push(informacion)
-    localStorage.setItem('sugerencia', JSON.stringify(sugerencia) )
+  document.getElementById("nombre").focus()
+  
+    sugerencias.push(sugerencia)
+    localStorage.setItem('sugerencias', JSON.stringify(sugerencias) )
     
    
 }
+document.getElementById('fomulario-sugerencias').addEventListener('submit', function (e) {
+  e.preventDefault();
+  getdata();
+});

@@ -179,12 +179,12 @@ const agregarCarrito = function (id) {
 const btnComprar = function () {
     
     //mensaje
-    window.alert("Gracias Por su compra se enviara un correo con indicaciones")
     let productos = JSON.parse(localStorage.getItem("productos")) || [] 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || []
     let user = JSON.parse(localStorage.getItem("user")) || null
 
     if (user) {
+        window.alert("Gracias Por su compra se enviara un correo con indicaciones")
         
         productos.forEach(function (product) {
             
