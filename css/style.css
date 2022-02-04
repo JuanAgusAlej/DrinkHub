@@ -95,7 +95,7 @@ footer a {
 
 
 .quienes-somos {
-	background-color: blanchedalmond;
+	background: url(../img/home/fondo.jpg);
 	min-height: 100vh;
 }
 .boxHome{
