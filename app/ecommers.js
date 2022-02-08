@@ -1,3 +1,11 @@
+class Pedidos{
+    constructor(usuario, carrito) {
+        this.id=new Date().getTime();
+        this.usuario = usuario,
+        this.carrito = carrito
+    }
+}
+
 // ---------------MUESTRA PRODUCTOS ------------------
 const mostrarProductos = function (productos) {
     
@@ -185,7 +193,7 @@ const btnComprar = function () {
 
     if (user) {
         window.alert("Gracias Por su compra se enviara un correo con indicaciones")
-        
+        let pedidos = JSON.parse(localStorage.getItem('pedidos')) || []
         productos.forEach(function (product) {
             
             carrito.forEach(function (i) {
@@ -205,8 +213,10 @@ const btnComprar = function () {
             
     
         })
+        pedidos.push(new Pedidos(user,carrito))
         enviarComprobante(carrito)
         localStorage.setItem("productos", JSON.stringify(productos))
+        localStorage.setItem("pedidos", JSON.stringify(pedidos))
         localStorage.removeItem("carrito")
         calcularTotal()
         mostrarProductos(productos)
