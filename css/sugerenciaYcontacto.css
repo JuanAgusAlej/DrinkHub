@@ -1,0 +1,65 @@
+#nombre{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}#apellido{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.logo-RRSS {
+    color: grey;
+    margin-left: 20px;
+}
+#parrafo-sugerencias {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 1.2rem;
+}
+#main-sugerencia{
+    background-color: rgb(59, 59,56);
+}
+#seccion-sugerencia{
+    height:72vh;
+}
+
+#imagen-sugerencia{
+    border-radius: 15px;
+    box-shadow:  0 0 55px rgba(52, 50, 167, 0.918);
+}
+.form-check-label{
+    color:whitesmoke;
+    font-style: bold;
+}
+.form-label{
+    color:whitesmoke;
+    font-style: bold;
+}
+.titulo{
+    color: whitesmoke;
+    text-align: center;
+}
+.parrafo-sugerencias{
+    color:whitesmoke;
+    text-align: center;
+
+}
+#parrafo-contacto{
+    color:whitesmoke
+}
+#main-contacto{
+    padding: 3%;
+    background-color: rgb(59, 59,56)
+}
+#card-contacto{
+    padding: 3%;
+    background-color: rgb(59, 59,56)  
+}
+.map-outer{
+    border-radius: 15px;
+    box-shadow:  0 0 55px rgba(52, 50, 167, 0.918);
+}
+.card-body{
+    padding-left: 50px;
+}
+.boton-enviar{
+    align-items: right;
+}
+

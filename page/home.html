@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Home - DrinkHub</title>
+  </head>
+  <body class="home-main">
+    <header>
+      <!-- <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container">
+            <a class="navbar-brand " href="./home.html"
+              ><img src="../img/logo.png" class="img-fluid containerImg" alt="logo"
+            /></a>
+          <button
+            class="navbar-toggler"
+            onClick="cargarNavbar()"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse row " id="navbarSupportedContent">
+            <div class="d-flex justify-content-end ">
+              
+
+                <ul class="navbar-nav letraNavBar2">
+                  <li class="nav-item align-text-center">
+                    <a class="btn btn-outline-light boton-style" aria-current="page" href="./ecommers.html"
+                      ><i class="fas fa-store-alt"></i></a
+                    >
+                  </li>
+                  <li class="nav-item m-0">
+                    <a class="btn btn-outline-light boton-style" href="./quienesSomos.html"
+                      >Quienes Somos</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-light boton-style" href="./sugerencia.html">Sugerencias</a>
+                  </li>
+                </ul>
+               
+                
+              
+          
+            
+            
+          </div>
+        </div>
+      </nav> -->
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+          <a class="navbar-brand " href="./home.html"><img src="../img/logo.png" class="img-fluid containerImg"
+              alt="logo" /></a>
+          <button class="navbar-toggler" onClick="cargarNavbar()" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse row " id="navbarSupportedContent">
+            <div class="d-flex justify-content-end ">
+  
+  
+              <ul class="navbar-nav letraNavBar2">
+                <li class="nav-item align-text-center">
+                  <a class="btn btn-outline-light boton-style" aria-current="page" href="./ecommers.html"><i
+                      class="fas fa-store-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-light boton-style" href="./quienesSomos.html">Quienes Somos</a>
+                </li>
+                <li class="nav-item mb-3">
+                  <a class="btn btn-outline-light boton-style" href="./sugerencia.html">Sugerencias</a>
+                </li>
+              </ul>
+   
+            </div>
+          </div>
+      </nav>
+    </header>
+    <!-- seccion home de la aplicacion -->
+    <main >
+<!-- card usuario -->
+
+<div class="row float-md-end sticky-md-top d-none d-md-block " id="cardUsuario">
+<div class="card col-md-12 m-4 boxHome" id="usuario" >
+              <!-- <div class="row ">
+                <div class="container col-md-4">
+                  <img src="../img/avatar/botella0.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Boracho67</h5>
+                    <p class="card-text">Boracho67@gmail.com</p>
+                    <p class="card-text">475681278</p>
+                    <a class="btn btn-dark mb-3" href="./administrar.html" role="button">Administrar</a>
+                    <a class="btn btn-dark mb-3" href="./configuracion.html" role="button">Configuracion</a>
+                    <a class="btn btn-dark mb-3" onclick="logout()" href="#" role="button">Logout</a>
+                   
+                    </div>
+                  </div>
+                </div> -->
+                </div>
+
+                
+                <div class="col-md-12 m-4" >
+                 <div class="d-grid gap-2 col-6 mx-auto publicar-home">
+                  <button class="btn btn-outline-dark" id="addPublic" type="button">Subi tu trago</button>
+                  
+                </div>
+                </div>
+                
+                <div class="card col-md-12 m-3 boxHome">
+                  <div
+                    class="my-3 float-md-end d-sm-none d-md-block d-flex justify-content-center container"
+                    id="busquedaTragos"
+                  >
+                    <div class="d-flex">
+                      <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                        id=buscador
+                        onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"
+                      />
+                      <a class="btn btn-outline-dark" onclick="busqueda(buscador.value)" onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"  >Buscar</a>
+                    </div>
+                    <div id="filtroBusqueda" >
+                      <!-- <a class="btn boton-style bg-primary text-white rounded-pill my-3 " onclick="eliminarFiltro()" > <i class="far fa-times-circle"> fernet</i></a> -->
+                    </div>
+                  </div>
+                </div>
+
+                
+ 
+              </div>
+              
+<!-- seccion cards tragos -->
+      <section class="mt-4">
+        <div class="container">
+          <div class="row ">
+            <div class="col-12 float-md-start " id="contenedor_cards">
+
+          <!--  
+                    <img src="../img/home/BloodyMary.jpg" class="img-fluid rounded-start" alt="...">
+                  
+                  
+                    <img src="../img/home/Negroni.webp" class="img-fluid rounded-start" alt="...">
+                  
+                    <img src="../img/home/TomCollins.jpg" class="img-fluid rounded-start" alt="...">
+                  
+                    <img src="../img/home/PiñaColada.jpg" class="img-fluid rounded-start" alt="...">
+                  
+                    <img src="../img/home/Clericot.jpg" class="img-fluid rounded-start" alt="...">
+                  
+                    <img src="../img/home/Rebujito.jpg" class="img-fluid rounded-start" alt="...">
+                  
+                
+              -->
+            </div>
+         </div>
+        </div>
+       </section>
+
+           
+                  
+              
+    
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="row align-items-center">
+           <div class="col-12 col-md-1 text-center">
+              <a class="navbar-brand" href="./home.html"><img class="containerImg-footer" src="../img/logo.png" class="img-fluid" alt="logo"/></a>
+           </div>
+          <div class="col-12 col-md-4 offset-md-3">
+            <div class="row text-center">
+              <a class="navbar-brand mx-3 text-white fs-3 font-bold"><i class="fas fa-glass-cheers"></i>  DrinkHub  <i class="fas fa-glass-cheers"></i></a>
+           </div>
+           <div class="row text-center">
+             <a class="navbar-brand mx-3 text-white fs-8 font-bold">© Derechos Reservados</a>
+           </div> 
+          </div>
+          <div class="col-12 col-md-2 offset-md-2 text-center">
+            <a href="./error404.html" class="btn btn-outline-light boton-style-footer my-3 fw-light">Trabaja con nosotros</a>
+            <a href="./contacto.html" class="btn btn-outline-light boton-style-footer my-3 fw-light" >Contactanos</a>
+          </div>
+        </div>
+       </div>
+   </footer>   
+   
+<!-- Modal de publicacion nueva -->
+<div
+class="modal fade"
+id="nuevaPublic"
+tabindex="-1"
+aria-labelledby="nuevaPublicLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="nuevaPublicLabel">
+        Ingresa el trago que preparaste!
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        onclick="limpiarModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <img
+        id="img_modal"
+        class="img-fluid rounded-start"
+        src="../img/error_img.png"
+        alt="imagen de muestra"
+      
+      />
+
+      <div class="mt-2 d-flex align-items-center">
+        <i class="fa fa-camera-retro me-1" aria-hidden="true"></i
+        ><input
+          id="imgPrueba"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese url de la imagen"
+        />
+      </div>
+      <div class="mt-2">
+        <input
+        type="text"
+          class="form-control"
+          id="modal_titulo"
+          placeholder="Ingrese el nombre del trago"
+          rows="3"
+        ></input>
+      </div>
+      <div class="mt-2">
+        <input
+        type="text"
+          class="form-control"
+          id="modal_ingrediente"
+          placeholder="Ingre los ingredientes con - entre cada uno"
+          rows="3"
+        ></input>
+      </div>
+      <div class="mt-2">
+        <textarea
+        
+          class="form-control"
+          id="modal_preparacion"
+          placeholder="Ingresar la forma de preparacion"
+          rows="3"
+        ></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        onclick="guardarPublicacion()"
+        class="btn btn-primary"
+        data-bs-dismiss="modal"
+      >
+        Publicar
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+   <script src="https://kit.fontawesome.com/ebf846398f.js" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../app/infoDeUsuario.js"></script>
+    <script src="../app/publicaciones.js"></script> 
+  </body>
+</html>

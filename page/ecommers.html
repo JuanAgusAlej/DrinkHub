@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/ecommers.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_7H3PEBxEp8gPlwDHjzfOD");
+})();
+</script>
+    <title>Home - DrinkHub</title>
+  </head>
+
+  <body class="home-main">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="./home.html"
+            ><img
+              src="../img/logo.png"
+              class="img-fluid containerImg"
+              alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onClick="cargarNavbar()"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+            <div class="d-flex justify-content-end">
+              <ul class="navbar-nav letraNavBar2">
+                <li class="nav-item align-text-center">
+                  <a
+                    class="btn btn-outline-light boton-style"
+                    aria-current="page"
+                    href="./ecommers.html"
+                    ><i class="fas fa-store-alt"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="btn btn-outline-light boton-style"
+                    href="./quienesSomos.html"
+                    >Quienes Somos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="btn btn-outline-light boton-style"
+                    href="./sugerencia.html"
+                    >Sugerencias</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div
+        class="row float-md-end sticky-md-top d-none d-md-block"
+        id="cardUsuario"
+      >
+        <div class="card col-md-12 m-4 boxHome" id="usuario">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Carrito de compra</h5>
+                <div id="precioTodal">
+                  <p class="card-text"></p>
+                </div>
+                <a class="btn btn-dark my-3" onclick="btnComprar()" role="button">Comprar</a>
+                <a class="btn btn-dark my-3" onclick="productoCarrito()" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                  >Productos</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-md-12 m-3 boxHome">
+          <div
+            class="my-3 float-md-end d-sm-none d-md-block d-flex justify-content-center container"
+            id="busquedaTragos"
+          >
+            <div class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id=buscador
+                onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"
+              />
+              <a class="btn btn-outline-dark" onclick="busqueda(buscador.value)" onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"  >Buscar</a>
+            </div>
+            <div id="filtroBusqueda" >
+              <!-- <a class="btn boton-style bg-primary text-white rounded-pill my-3 " onclick="eliminarFiltro()" > <i class="far fa-times-circle"> fernet</i></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------Productos----------------- -->
+      <section class="">
+        <div class="container">
+          <div class="row" id="cards-productos">
+            <!-- <div
+              class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4"
+            >
+              <div class="card">
+                <img
+                  src="../img/producto/soda.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cerveza Andes</h5>
+                  <p>$200</p>
+                  <a class="btn btn-primary">Agregar</a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4"
+            >
+              <div class="card">
+                <img
+                  src="../img/producto/soda.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cerveza Andes</h5>
+                  <p>$200</p>
+                  <a class="btn btn-primary">Agregar</a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4"
+            >
+              <div class="card">
+                <img
+                  src="../img/producto/soda.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cerveza Andes</h5>
+                  <p>$200</p>
+                  <a class="btn btn-primary">Agregar</a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4"
+            >
+              <div class="card">
+                <img
+                  src="../img/producto/soda.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cerveza Andes</h5>
+                  <p>$200</p>
+                  <a class="btn btn-primary">Agregar</a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4"
+            >
+              <div class="card">
+                <img
+                  src="../img/producto/soda.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cerveza Andes</h5>
+                  <p>$200</p>
+                  <a class="btn btn-primary">Agregar</a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2 my-4"
+            >
+              <div class="card">
+                <img
+                  src="../img/producto/soda.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cerveza Andes</h5>
+                  <p>$200</p>
+                  <a class="btn btn-primary">Agregar</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-1 text-center">
+            <a class="navbar-brand" href="./home.html"
+              ><img
+                class="containerImg-footer"
+                src="../img/logo.png"
+                class="img-fluid"
+                alt="logo"
+            /></a>
+          </div>
+          <div class="col-12 col-md-4 offset-md-3">
+            <div class="row text-center">
+              <a class="navbar-brand mx-3 text-white fs-3 font-bold"
+                ><i class="fas fa-glass-cheers"></i> DrinkHub
+                <i class="fas fa-glass-cheers"></i
+              ></a>
+            </div>
+            <div class="row text-center">
+              <a class="navbar-brand mx-3 text-white fs-8 font-bold"
+                >© Derechos Reservados</a
+              >
+            </div>
+          </div>
+          <div class="col-12 col-md-2 offset-md-2 text-center">
+            <a
+              href="./error404.html"
+              class="btn btn-outline-light boton-style-footer my-3 fw-light"
+              >Trabaja con nosotros</a
+            >
+            <a
+              href="./contacto.html"
+              class="btn btn-outline-light boton-style-footer my-3 fw-light"
+              >Contactanos</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">cantidad</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody id="tbProducto">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onClick="btnComprar()" data-bs-dismiss="modal" >Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="../app/ecommers.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ebf846398f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

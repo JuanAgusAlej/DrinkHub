@@ -1,0 +1,32 @@
+.quienes-somos {
+	background-color: blanchedalmond;
+}
+
+
+/* -----------------------------------main------------------------------- */
+
+.estilo-gris img {
+	filter: grayscale(1) !important;
+}
+
+.estilo-gris img:hover {
+	filter: grayscale(0) !important;
+	transition-property: filter !important;
+	transition-duration: 1s !important;
+}
+
+@media (min-width: 991px) {
+	.img-card-nosotros {
+		height: 300px;
+	}
+}
+@media (max-width: 991px) {
+	.img-card-nosotros {
+		min-height: 320px;
+	}
+}
+
+/*-------------------- FOOTER------------------------------------ */
+
+
+
