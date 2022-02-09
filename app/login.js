@@ -10,7 +10,7 @@ class Usuario{
       this.correo=correo
       this.pass=pass
       this.avatar=avatar
-    this.admin = admin
+      this.admin = admin
     
   }
   

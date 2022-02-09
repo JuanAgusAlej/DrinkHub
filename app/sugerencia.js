@@ -1,12 +1,17 @@
 
 
 class Sugerencia{
-    constructor(nombre, apellido, email, sugerencia){
+  constructor(nombre, apellido, email, sugerencia,fecha) {
+    this.id = new Date().getTime();
+    
+      this.fecha = fecha;
         this.nombre = nombre + ' ' + apellido
         this.email = email
         this.sugerencia = sugerencia
     }
 }
+
+
         
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -31,12 +36,14 @@ class Sugerencia{
    
 function getdata() {
    let sugerencias = JSON.parse(localStorage.getItem("sugerencias")) || [];
-  
+   let f = new Date();
+   let fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear()
     let sugerencia = new Sugerencia(
         document.getElementById("nombre").value, 
     document.getElementById("apellido").value,
     document.getElementById("email").value,
-    document.getElementById("sugerencia").value)
+      document.getElementById("sugerencia").value,
+      fecha)
    
     alert(`Gracias por tu aporte ${document.getElementById("nombre").value}`)
     document.getElementById("nombre").value = "";

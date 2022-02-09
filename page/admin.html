@@ -20,7 +20,7 @@
     <div class="btn-group nav flex-column text-white w-100" id="menuAdmin">
       <h3 class="nav-link text-white my-2">Administracion</h3>
       <div>
-        <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off" />
+        <input type="radio" class="btn-check " name="btnradio" id="btnradio1" onClick='mostrarPedido()' autocomplete="off" />
         <label class="btn btn-outline-secondary menu" for="btnradio1"><i class="bx bxl-trello"></i>
           <span class="mx-2">Pedidos</span></label>
 
@@ -29,19 +29,19 @@
         <label class="btn btn-outline-secondary menu" for="btnradio2"><i class="bx bxl-dropbox"></i>
           <span class="mx-2">Productos</span></label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" onClick='mostrarUsuarios()' autocomplete="off" />
         <label class="btn btn-outline-secondary menu" for="btnradio3"><i class="bx bxs-user-detail"></i>
           <span class="mx-2">Usuarios</span></label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" onClick="mostrarSugerencia()" autocomplete="off"  />
         <label class="btn btn-outline-secondary menu" for="btnradio4"><i class="bx bx-conversation"></i>
           <span class="mx-2">Sugerencias</span></label>
       </div>
     </div>
    
 
-    <span href="#" class="nav-link h4 w-100 mb-5">
-      <a href=""><i class="bx bx-log-out text-white"></i></a>
+    <span class="nav-link h4 w-100 mb-5">
+      <a href="./home.html"><i class="bx bx-log-out text-white"></i></a>
     </span>
   </div>
 
@@ -52,64 +52,49 @@
       <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
     </nav>
     <div class="col-md-10 offset-md-1 " id="detalleTabla">
-      <!-- <h3>Pedidos</h3>
-      <div class="table-responsive">
-        <table class="table">
+      
+      <!-- <h2 class="text-center my-3">Pedidos</h2>
+      <div class="accordion" id="accordionExample">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Ticket
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body row">
+              <strong>Usuario: </strong> 
+              <strong>Producto: </strong>  
+              <strong class="my-2">Monto Total: </strong>
+            </div>
+          </div>
+        </div>
+        
+      </div> -->
+      <h3>Pedidos</h3>
+      <div class="table-responsive col-10 offset-1">
+        <table class="table ">
           <thead>
             <tr>
-              <th scope="col">Ticket</th>
-              <th scope="col">Usuario</th>
-              <th scope="col">Valor</th>
+              <th>Cantidad</th>
+              <th>Producto</th>
+              <th>Valor</th>
             </tr>
           </thead>
           <tbody id="tbProducto">
             <tr>
-              <th scope="row">${product.cantidad}</th>
-              <td>${product.nombre}</td>
-              <td id="pedidoValor">
-                $${product.valor * product.cantidad}
-                <a class="btn ms-2" onclick="mostrar(${product.id})">
-                  <i class="bx bx-chevrons-down" id="mostrarMas"></i>
-                  <i class="bx bx-chevrons-up d-none" id="mostrarMenos"></i>
-                </a>
-              </td>
+              <th scope="row">4</th>
+              <td >${product.nombre}</td>
+              <td>$700</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h3>Productos</h3>
+    <!--
+      <h3>Usuarios</h3>
       <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Imagen</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Valor</th>
-              <th scope="col">Cantidad</th>
-            </tr>
-          </thead>
-          <tbody id="tbProducto">
-            <tr>
-              <td class="producto" scope="">
-                <img src="../img/producto/andes.png" class="img-fluid" />
-              </td>
-              <td class="detalle">${product.nombre}</td>
-              <td class="detalle">
-                $${product.valor}<a class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  <i class="bx bx bx-edit ms-2"></i></a>
-              </td>
-              </td>
-              <td class="detalle">
-                $${product.cantidad}
-                <i class="bx bx bx-edit ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="table-responsive">
-        <h3>Usuarios</h3>
         <table class="table">
           <thead>
             <tr>
@@ -134,10 +119,10 @@
           </tbody>
         </table>
       </div>
-
-      <div class="table-responsive">
-        <h3>Sugerencias</h3>
-        <table class="table">
+    
+      <h3>Sugerencias</h3>
+      <!-- <div class="table-responsive accordion" id="accordionExample">
+        <table class="table ">
           <thead>
             <tr>
               <th scope="col">Nombre</th>
@@ -145,21 +130,29 @@
               <th scope="col">fecha y hora</th>
             </tr>
           </thead>
-          <tbody id="tbProducto">
-            <tr>
+          <tbody id="tbProducto" class="accordion-item">
+            <tr class="accordion-header" id="headingOne">
               <td scope="row">Nombre</td>
               <td>correo</td>
               <td>
                 fecha y hora
-                <a class="btn ms-2" onclick="eliminarProducto(${product.id})">
+                <a class="btn ms-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="falso" aria-controls="collapseOne">
                   <i class="bx bx-chevrons-down" id="mostrarMas"></i>
                   <i class="bx bx-chevrons-up d-none" id="mostrarMenos"></i>
                 </a>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
               </td>
+            
             </tr>
           </tbody>
         </table>
       </div> -->
+      
+      
     </div>
   </div>
   
@@ -170,15 +163,15 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content" id="modal">
 
-        <div class="modal-body row " id="modalBody">
-          <!-- <p class="col-auto offset-1">Agregar cantidad:</p>
-          <input type="text" class=" col-auto"> -->
+        <!-- <div class="modal-body row " id="modalBody">
+          <p class="col-auto offset-1">Agregar cantidad:</p>
+          <input type="text" class=" col-auto">
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div> -->
       </div>
     </div>
   </div>
