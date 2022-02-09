@@ -30,22 +30,22 @@ body {
 }
 
 .boton-style {
-	border: 1px solid #ffffff;
-	border-radius: 15px;
-	margin-left: 45px;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 200;
-	font-size: 15px;
+	border: 1px solid #ffffff !important; 
+	border-radius: 15px !important;
+	margin-left: 45px !important;
+	font-family: Roboto !important;
+	font-style: normal !important;
+	font-weight: 200 !important;
+	font-size: 15px !important;
 }
 
 .boton-style-footer {
-	border: 0.01px solid #ffffff;
-	border-radius: 15px;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 200;
-	font-size: 12px;
+	border: 0.01px solid #ffffff !important;
+	border-radius: 15px !important;
+	font-family: Roboto !important;
+	font-style: normal !important;
+	font-weight: 200 !important;
+	font-size: 12px !important;
 }
 /* ---------------------NavBar------------------------------- */
 
