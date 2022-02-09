@@ -87,7 +87,7 @@
                 
                 <div class="col-md-12 m-4" >
                  <div class="d-grid gap-2 col-6 mx-auto publicar-home">
-                  <button class="btn btn-outline-dark" type="button">Subi tu trago</button>
+                  <button class="btn btn-outline-dark" id="addPublic" type="button">Subi tu trago</button>
                   
                 </div>
                 </div>
@@ -112,115 +112,24 @@
       <section class="mt-4">
         <div class="container">
           <div class="row ">
-            <div class="col-12 float-md-start ">
+            <div class="col-12 float-md-start " id="contenedor_cards">
 
-              <div class="card mb-3 boxHome card-publicacion">
-                <div class="row g-0">
-                  <div class="col-md-4">
+          <!--  
                     <img src="../img/home/BloodyMary.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8 align-self-center ">
-                    <div class="card-body d-flex flex-column align-items-center ">
-                      <h2 class="card-title ">Bloody Mary</h2>
-                      <h3 class="card-text mb-3">Ingredientes</h3>
-                      <p class="card-text">Vodka - Zumo de tomate - Zumo de limón  -  Salsa Tabasco dos gotas - Pimienta negra molida - Apio </p>
-                      <h3 class="card-text mb-3">Preparacion</h3>
-                      <p class="card-text">A la hora de condimentar este cóctel, es fundamental un buen toque de salsa Perrins, muy poco Tabasco (dos gotas) para no pasarnos de picante agresivo y dos o tres vueltas de pimienta negra que completarán el efecto picante, para que quede en su punto. Opcionalmente se puede añadir un chorrito de caldo concentrado de carne para potenciar el sabor. Agregamos también el zumo de limón, aproximadamente 15 ml y agitamos con un cubo de hielo para mezclar bien y enfriar. Continuamos con el vodka, utilizando la medida del jigger pequeño o grande, en función de la proporción de alcohol que se desee incorporar. Lo habitual es utilizar una tercera parte de la cantidad de zumo de tomate que se vaya a usar. Para 210 ml de tomate, utilizaremos 70 ml de vodka y la proporción quedará en su punto. No obstante, con la experiencia de Kike el lo hace a ojo (y lo clava). Para incorporar el apio y la sal, el barman nos recomienda utilizar sal de apio, que aporta el inconfundible sabor de la hortaliza, sin saturar (evitando de paso que su sabor nos pueda repetir). Además así incorporamos el toque salado. No obstante, para terminar la preparación, vamos a meter una ramita de apio dentro del vaso dejando que asome por fuera que servirá para remover nuestro Bloody Mary, como si fuera una cucharilla. Ya sólo falta el zumo de tomate y agitar para que esté en su punto. El barman de Soda 917 nos recomienda airear bien el Bloody Mary, lanzándolo desde la coctelera al vaso dos o tres veces para terminar sirviéndolo en la copa, finalizando con la ramita de apio fresco. En caso de añadir hielo, hay que hacerlo al terminar de servir, sin echar más de dos cubitos para que nuestro Bloody Mary no quede aguado.
-                      </p>
-                      
-                    </div>
-                    <div>
-                      
-                    <button type="button" class="btn btn-outline-dark offset-md-3 mb-3 ">Comprar</button>
-                    <button type="button" class="btn btn-outline-dark mx-4 mb-3">Descargar</button>
-                    <button type="button" class="btn btn-outline-dark mb-3">Ver Menos</button>
-                  </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-3 boxHome">
-                <div class="row g-0">
-                  <div class="col-md-4">
+                  
+                  
                     <img src="../img/home/Negroni.webp" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8 align-self-center ">
-                    <div class="card-body d-flex flex-column align-items-center ">
-                      <h2 class="card-title ">Negroni</h2>
-                      <p class="card-text">Campari - vermú rojo - ginebra - naranja</p>
-                    </div>
-                    
-                    <a href=""><button type="button" class="btn btn-outline-dark offset-md-10 ">Ver Más</button> </a>
-                  </div>
-                </div>
-              </div>
-
-               
-
-              <div class="card mb-3 boxHome">
-                <div class="row g-0">
-                  <div class="col-md-4">
+                  
                     <img src="../img/home/TomCollins.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8 align-self-center">
-                    <div class="card-body d-flex flex-column align-items-center">
-                      <h2 class="card-title">Tom Collins</h2>
-                      <p class="card-text">ginebra - zumo de limón - soda - azúcar - hielo</p>
-                      
-                    </div>
-                    <a href=""><button type="button" class="btn btn-outline-dark offset-md-10">Ver Más</button> </a>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="card mb-3 boxHome">
-                <div class="row g-0">
-                  <div class="col-md-4">
+                  
                     <img src="../img/home/PiñaColada.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8 align-self-center">
-                    <div class="card-body d-flex flex-column align-items-center">
-                      <h2 class="card-title">Piña colada</h2>
-                      <p class="card-text">ron blanco - leche de coco - zumo de pila - zumo de lima - sirope de azúcar (opcional)</p>
-                      
-                    </div>
-                    <a href=""><button type="button" class="btn btn-outline-dark offset-md-10">Ver Más</button> </a>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="card mb-3 boxHome">
-                <div class="row g-0">
-                  <div class="col-md-4">
+                  
                     <img src="../img/home/Clericot.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8 align-self-center">
-                    <div class="card-body d-flex flex-column align-items-center">
-                      <h2 class="card-title">Clericot o clericó</h2>
-                      <p class="card-text">ginebra - zumo de limón - soda - azúcar - hielo</p>
-                      
-                    </div>
-                    <a href=""><button type="button" class="btn btn-outline-dark offset-md-10">Ver Más</button> </a>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="card mb-3 boxHome">
-                <div class="row g-0">
-                  <div class="col-md-4">
+                  
                     <img src="../img/home/Rebujito.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8 align-self-center">
-                    <div class="card-body d-flex flex-column align-items-center">
-                      <h2 class="card-title">Rebujito</h2>
-                      <p class="card-text"> Vino Manzanilla - Fino - Montilla Moriles o similar - refresco de lima o gaseosa - Hierbabuena - Hielo</p>
-                      
-                    </div>
-                    <a href=""><button type="button" class="btn btn-outline-dark offset-md-10">Ver Más</button> </a>
-                  </div>
-                </div>
+                  
                 
-              </div>
+              -->
             </div>
          </div>
         </div>
@@ -252,9 +161,93 @@
         </div>
        </div>
    </footer>   
-   <script src="../app/infoDeUsuario.js"></script>
+   
+<!-- Modal de publicacion nueva -->
+<div
+class="modal fade"
+id="nuevaPublic"
+tabindex="-1"
+aria-labelledby="nuevaPublicLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="nuevaPublicLabel">
+        Ingresa el trago que preparaste!
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        onclick="limpiarModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <img
+        id="img_modal"
+        class="img-fluid rounded-start"
+        src="../img/error_img.png"
+        alt="imagen de muestra"
+      
+      />
+
+      <div class="mt-2 d-flex align-items-center">
+        <i class="fa fa-camera-retro me-1" aria-hidden="true"></i
+        ><input
+          id="imgPrueba"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese url de la imagen"
+        />
+      </div>
+      <div class="mt-2">
+        <input
+        type="text"
+          class="form-control"
+          id="modal_titulo"
+          placeholder="Ingrese el nombre del trago"
+          rows="3"
+        ></input>
+      </div>
+      <div class="mt-2">
+        <input
+        type="text"
+          class="form-control"
+          id="modal_ingrediente"
+          placeholder="Ingre los ingredientes con - entre cada uno"
+          rows="3"
+        ></input>
+      </div>
+      <div class="mt-2">
+        <textarea
+        
+          class="form-control"
+          id="modal_preparacion"
+          placeholder="Ingresar la forma de preparacion"
+          rows="3"
+        ></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        onclick="guardarPublicacion()"
+        class="btn btn-primary"
+      >
+        Publicar
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
    <script src="https://kit.fontawesome.com/ebf846398f.js" crossorigin="anonymous"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+    <script src="../app/infoDeUsuario.js"></script>
+    <script src="../app/publicaciones.js"></script> 
+  </body>
 </html>

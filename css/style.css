@@ -18,7 +18,10 @@
     background-color: aliceblue;
 }
 
-
+#modal_preparacion{
+    height:20vh;
+    resize: none;
+}
 .quienes-somos {
 	background-color: blanchedalmond;
 	min-height: 100vh;
