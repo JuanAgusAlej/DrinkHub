@@ -121,7 +121,7 @@ const validarDatos = function () {
   })
   console.log(email, usuarios)
   if ( usuario ) {
-    if  ( usuario.pass === password) {
+    if  ( usuario.pass === password && !usuario.bloqueado) {
       if (usuario.validado) {
         localStorage.setItem('user', JSON.stringify(usuario));
         let ecommer = JSON.parse(localStorage.getItem('ecommer'))

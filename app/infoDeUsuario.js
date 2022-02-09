@@ -19,14 +19,7 @@ const agregarUsuario = function () {
 
 let user = JSON.parse(localStorage.getItem('user')) || []
 
-// const verificacionLoguin = function () {
 
-//     if (!localStorage.getItem("user")) {
-//         location.href='../index.html'
-//     }
-
-// }
-//verificacionLoguin()
 
 let navbarSupportedContent = document.getElementById('navbarSupportedContent')
 
@@ -45,7 +38,7 @@ if (user.admin) {
       <p class="card-text">${user.correo}</p>
       <p class="card-text">${user.telefono}</p>
       <a class="btn btn-dark mb-3" href="./configuracion.html" role="button">Configuracion</a>
-      <a class="btn btn-dark mb-3" href="./administrar.html" role="button">Administrar</a>
+      <a class="btn btn-dark mb-3" href="./admin.html" role="button">Administrar</a>
       <a class="btn btn-dark mb-3" onclick="logout()" href="#" role="button">Logout</a>
       
      
@@ -79,16 +72,24 @@ if (user.admin) {
               <img src="../img/avatar/${user.avatar}.png" class="card img-fluid rounded-start usuarioNavbar"  alt="...">
               <spam class="blockquote-footer usuarioNavbar">${user.nick}</spam>
               <a class="btn btn-outline-light boton-style usuarioNavbar" href="./configuracion.html">Configuracion</a>
-              <a class="btn btn-outline-light boton-style usuarioNavbar" href="./administrar.html">Administrar</a>
+              <a class="btn btn-outline-light boton-style usuarioNavbar" href="./admin.html">Administrar</a>
               <a class="btn btn-outline-light boton-style usuarioNavbar" onclick="logout()">Logout</a>
                 
               </div>
             </div>
             
-            <form class="d-flex mt-3" >
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
+            <div class="d-flex my-3">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id=buscador
+              onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"
+            />
+          </div>
+          <div id="filtroBusqueda" >
+          </div>
   
   `
   
@@ -141,10 +142,18 @@ if (user.admin) {
               </div>
             </div>
             
-            <form class="d-flex mt-3" >
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
+            <div class="d-flex my-3">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id=buscador
+              onkeyup = "if(event.keyCode == 13) busqueda(buscador.value)"
+            />
+          </div>
+          <div id="filtroBusqueda" >
+          </div>
   `
   
 }
@@ -159,6 +168,6 @@ const logout = function () {
 
     //console.log("asdad")
      localStorage.removeItem("user");
-     location.reload()
+     location.href='../index.html'
 
 }

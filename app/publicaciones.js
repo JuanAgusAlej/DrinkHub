@@ -16,14 +16,16 @@ class Receta {
 const crear_card = function (cardTrago) {
     let contenedor_cards = document.querySelector("#contenedor_cards");
     let card = "";
+    let numeracion ='posteo'
+    let i = 0
     cardTrago.map(function (item) {
       card += ` <div class="accordion " id="accordionExample">
                   
       <div class="accordion-item mb-3 card-publicacion">
         <div class="card mb-3 boxHome ">
           <div class="row g-0 ">
-            <div class="col-md-4">
-              <img src=${item.imagen} class="img-fluid rounded-start" alt="...">
+            <div class="col-md-4" >
+              <img src=${item.imagen} class="img-fluid rounded-start"  alt="...">
             </div>
             <div class="col-md-8 align-self-center ">
               <div class="card-body d-flex flex-column align-items-center ">
@@ -35,13 +37,13 @@ const crear_card = function (cardTrago) {
   
           </div>
           <div class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${numeracion+i}" aria-expanded="false" aria-controls="${numeracion+i}">
             </button>
         </div>
         </div>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div id="${numeracion+i}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <h4 class="card-text mb-3"><strong>Preparacion</strong></h4>
+            <h4 class="card-text mb-3 text-center"><strong>Preparacion</strong></h4>
             <p class="card-text"> ${item.preparacion}</p>
           </div>
         </div>
@@ -49,13 +51,16 @@ const crear_card = function (cardTrago) {
   
       
     </div>`;
+      i++
     });
     contenedor_cards.innerHTML = card;
   };
   
 const verificacionLoguin = function () {
     
-    if (!localStorage.getItem("user")) {
+  if (!localStorage.getItem("user")) {
+
+    location.href='../index.html'
     } else {
         
         let cardTrago = JSON.parse(localStorage.getItem("recetas")) || [];
@@ -73,7 +78,7 @@ document.querySelector("#addPublic").addEventListener("click", function () {
   myModal.show();
 });
 const agregarImagen = function (e) {
-  let campo = document.querySelector("#text_modal");
+  let campo = document.querySelector("#img_modal");
   if (e.keyCode === 13) {
     document.querySelector("#img_modal").src = campo.value;
   }
@@ -95,7 +100,7 @@ const guardarPublicacion = function () {
     new Receta(titulo, ingredientes, preparacion, imagen, user.nick)
   );
   localStorage.setItem("recetas", JSON.stringify(recetas));
-  crear_card();
+  crear_card(recetas);
 };
 
 // ---------------- FILTRA BUSQUEDA -----------------

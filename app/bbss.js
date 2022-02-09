@@ -8,7 +8,7 @@ class Usuario {
     pass,
     admin = false,
     telefono = 'no hay numero',
-    avatar = "default"
+    avatar = "botella0"
   ) {
     this.id = generadorID++;
     this.nombre = nombre;

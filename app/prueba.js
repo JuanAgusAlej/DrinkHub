@@ -1,7 +1,7 @@
 const verificacionLoguin = function () {
   let user = JSON.parse(localStorage.getItem("user")) || null
-  if (user.admin) {
-      location.href='./page/home.html';
+  if (!user.admin) {
+      location.href='./home.html';
   }
 
 }
@@ -19,32 +19,13 @@ menu_btn.addEventListener("click", () => {
 //--------------PEDIDOS---------------------------
 
 const mostrarPedido = function () {
-         
-  //       <div class="accordion-item">
-  //         <h2 class="accordion-header" id="headingTwo">
-  //           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-  //             Ticket
-  //           </button>
-  //         </h2>
-  //         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-  //           <div class="accordion-body row">
-  //             <strong>Usuario: </strong> 
-  //             <strong>Producto: </strong>  
-  //             <strong class="my-2">Monto Total: </strong>
-  //           </div>
-  //         </div>
-  //       </div>
-        
-  //     </div>
+  
   let detalleTabla = document.getElementById('detalleTabla')
   let detalleTablaHtml =`<h2 class="text-center my-3">Pedidos</h2>
   <div class="accordion" id="accordionExample">`
   let pedidos = JSON.parse(localStorage.getItem('pedidos')) || []
   let numeracion ='ticket'
   let i = 0
-
-
-
 
   pedidos.forEach(function (pedido) {
     const {usuario, carrito} = pedido
@@ -182,7 +163,7 @@ const modificarCantidad = function (id) {
   </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" onClick='cambiarDato(${id},${false},cambio.value)'>Guardar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick='cambiarDato(${id},${false},cambio.value)'>Guardar</button>
         </div>
 `
 
