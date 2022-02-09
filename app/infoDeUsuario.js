@@ -19,13 +19,13 @@ const agregarUsuario = function () {
 
 let user = JSON.parse(localStorage.getItem('user')) || []
 
-const verificacionLoguin = function () {
+// const verificacionLoguin = function () {
 
-    if (!localStorage.getItem("user")) {
-        location.href='../index.html'
-    }
+//     if (!localStorage.getItem("user")) {
+//         location.href='../index.html'
+//     }
 
-}
+// }
 //verificacionLoguin()
 
 let navbarSupportedContent = document.getElementById('navbarSupportedContent')
