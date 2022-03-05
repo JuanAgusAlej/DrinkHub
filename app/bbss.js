@@ -336,9 +336,15 @@ const agregarProducto = function () {
   localStorage.setItem("productos", JSON.stringify(productos));
 };
 
+const redirigir = () => {
+  console.log("sadfsf")
+  location.href = '../index.html'
+  
+}
 
 agregarUsuario();
 agregarNosotros();
 agregarRecetas();
 agregarEmpresaDatos();
 agregarProducto();
+redirigir()
