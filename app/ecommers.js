@@ -17,7 +17,7 @@ const mostrarProductos = function (productos) {
         if (product.stock) {
             
             cardsProductosHtml += `
-            <div class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3  my-4 ">
+            <div class="col-6 col-sm-4 col-md-5 col-lg-4 col-xl-3  my-4 ">
                 <div class="card">
                   <img src="${product.imagen}" class="img-fluid rounded-start" alt="...">
                   <div class="card-body">
