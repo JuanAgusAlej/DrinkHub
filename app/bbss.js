@@ -342,9 +342,11 @@ const redirigir = () => {
   
 }
 
-agregarUsuario();
-agregarNosotros();
-agregarRecetas();
-agregarEmpresaDatos();
-agregarProducto();
-redirigir()
+console.log(usuarios);
+if (!usuarios.length) {
+  agregarUsuario();
+  agregarNosotros();
+  agregarRecetas();
+  agregarEmpresaDatos();
+  agregarProducto();
+}
